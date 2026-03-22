@@ -3,11 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, ShieldCheck, SmilePlus, PhoneOff, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
-import { FadeIn } from "@/components/ui/motion";
 import { trackCTAClick } from "@/lib/analytics";
 
 interface HeroSectionProps {
@@ -90,16 +88,16 @@ export function HeroSection({
           }
         >
           {/* Text content */}
-          <div className={hasImage ? "" : ""}>
+          <div>
             {badge && (
-              <FadeIn delay={0}>
+              <div className="animate-fade-up">
                 <Badge variant="primary" className="mb-6 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase">
                   {badge}
                 </Badge>
-              </FadeIn>
+              </div>
             )}
 
-            <FadeIn delay={0.1}>
+            <div className="animate-fade-up" style={{ animationDelay: "0.1s" }}>
               <h1 className="text-4xl font-extrabold tracking-tight text-primary-950 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
                 {title}
                 {highlight && (
@@ -109,16 +107,16 @@ export function HeroSection({
                   </>
                 )}
               </h1>
-            </FadeIn>
+            </div>
 
-            <FadeIn delay={0.2}>
+            <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <p className={`mt-6 text-lg leading-relaxed text-surface-500 sm:text-xl sm:leading-relaxed ${layoutCentered ? "max-w-xl mx-auto" : "max-w-xl"}`}>
                 {description}
               </p>
-            </FadeIn>
+            </div>
 
             {(primaryCTA || secondaryCTA) && (
-              <FadeIn delay={0.3}>
+              <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
                 <div className={`mt-10 flex flex-wrap gap-3.5 ${layoutCentered ? "justify-center" : ""}`}>
                   {primaryCTA && (
                     <Link
@@ -146,11 +144,11 @@ export function HeroSection({
                     </Link>
                   )}
                 </div>
-              </FadeIn>
+              </div>
             )}
 
             {phone && (
-              <FadeIn delay={0.4}>
+              <div className="animate-fade-up" style={{ animationDelay: "0.4s" }}>
                 <div className="mt-8 flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-100/80">
                     <Phone className="h-4 w-4 text-primary-500" />
@@ -165,13 +163,13 @@ export function HeroSection({
                     </a>
                   </div>
                 </div>
-              </FadeIn>
+              </div>
             )}
           </div>
 
           {/* Image + floating badges */}
           {hasImage && (
-            <FadeIn delay={0.3} className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <div className="relative w-full max-w-lg">
                 <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary-200/30 via-accent-200/20 to-transparent blur-2xl pointer-events-none" />
                 <Image
@@ -180,67 +178,47 @@ export function HeroSection({
                   width={image.width || 600}
                   height={image.height || 500}
                   className="relative w-full h-auto rounded-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
 
-                {/* Floating badges */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.7, duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="absolute -left-4 top-6 sm:-left-8 z-10"
-                >
+                <div className="absolute -left-4 top-6 sm:-left-8 z-10 animate-slide-left" style={{ animationDelay: "0.7s" }}>
                   <div className="flex items-center gap-2 rounded-xl border border-surface-200/80 bg-white/95 backdrop-blur-sm px-3 py-2 shadow-[var(--shadow-card)]">
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-emerald-50">
                       <PhoneOff className="h-3.5 w-3.5 text-emerald-600" />
                     </div>
                     <span className="text-xs font-semibold text-primary-950 whitespace-nowrap">Zero kolejek</span>
                   </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.85, duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="absolute -right-4 top-[20%] sm:-right-6 z-10"
-                >
+                <div className="absolute -right-4 top-[20%] sm:-right-6 z-10 animate-slide-right" style={{ animationDelay: "0.85s" }}>
                   <div className="flex items-center gap-2 rounded-xl border border-surface-200/80 bg-white/95 backdrop-blur-sm px-3 py-2 shadow-[var(--shadow-card)]">
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50">
                       <Sparkles className="h-3.5 w-3.5 text-blue-600" />
                     </div>
                     <span className="text-xs font-semibold text-primary-950 whitespace-nowrap">Naturalny głos</span>
                   </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.0, duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="absolute -left-4 bottom-[22%] sm:-left-10 z-10"
-                >
+                <div className="absolute -left-4 bottom-[22%] sm:-left-10 z-10 animate-slide-left" style={{ animationDelay: "1.0s" }}>
                   <div className="flex items-center gap-2 rounded-xl border border-surface-200/80 bg-white/95 backdrop-blur-sm px-3 py-2 shadow-[var(--shadow-card)]">
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-violet-50">
                       <ShieldCheck className="h-3.5 w-3.5 text-violet-600" />
                     </div>
                     <span className="text-xs font-semibold text-primary-950 whitespace-nowrap">RODO & AI Act</span>
                   </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.15, duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="absolute -right-4 bottom-8 sm:-right-8 z-10"
-                >
+                <div className="absolute -right-4 bottom-8 sm:-right-8 z-10 animate-slide-right" style={{ animationDelay: "1.15s" }}>
                   <div className="flex items-center gap-2 rounded-xl border border-surface-200/80 bg-white/95 backdrop-blur-sm px-3 py-2 shadow-[var(--shadow-card)]">
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-amber-50">
                       <SmilePlus className="h-3.5 w-3.5 text-amber-600" />
                     </div>
                     <span className="text-xs font-semibold text-primary-950 whitespace-nowrap">Zadowoleni pacjenci</span>
                   </div>
-                </motion.div>
+                </div>
               </div>
-            </FadeIn>
+            </div>
           )}
         </div>
       </Container>

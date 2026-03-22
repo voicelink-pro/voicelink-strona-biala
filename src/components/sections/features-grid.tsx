@@ -74,7 +74,8 @@ export function FeaturesGrid() {
                 width={1200}
                 height={700}
                 className="w-full h-auto"
-                priority
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                loading="lazy"
               />
             </div>
           </div>

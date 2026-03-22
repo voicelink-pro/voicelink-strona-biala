@@ -277,6 +277,30 @@ body {
     background-size: 24px 24px;
   }
 
+  /* CSS-only animations for above-the-fold content (avoids framer-motion on critical path) */
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slide-in-right {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+  }
+  .animate-slide-left {
+    animation: slide-in-left 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+  }
+  .animate-slide-right {
+    animation: slide-in-right 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+  }
+
   /* Calculator slider */
   .calc-slider {
     -webkit-appearance: none;

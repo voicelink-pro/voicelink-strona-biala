@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { CookieBanner } from "@/components/cookie-banner";
-import { ScrollTracker } from "@/components/scroll-tracker";
+
+const CookieBanner = dynamic(() => import("@/components/cookie-banner").then((m) => m.CookieBanner));
+const ScrollTracker = dynamic(() => import("@/components/scroll-tracker").then((m) => m.ScrollTracker));
 import { JsonLd } from "@/components/json-ld";
 import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/schema";
 import { GTM_ID } from "@/lib/analytics";
