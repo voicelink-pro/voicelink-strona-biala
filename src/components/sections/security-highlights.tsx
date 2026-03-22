@@ -95,7 +95,7 @@ export function SecurityHighlights() {
             <div className="relative lg:scale-125 lg:origin-center">
               <div className="absolute -inset-8 rounded-3xl bg-gradient-to-br from-accent-200/20 via-primary-200/10 to-transparent blur-2xl pointer-events-none" />
               <Image
-                src="/images/security.jpg"
+                src="/images/security.png"
                 alt="VoiceLink — bezpieczeństwo danych medycznych"
                 width={1200}
                 height={1200}
