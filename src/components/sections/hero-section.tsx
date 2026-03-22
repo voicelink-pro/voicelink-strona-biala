@@ -43,8 +43,8 @@ export function HeroSection({
     <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-32">
       {/* Background effects */}
       <div className="absolute inset-0 gradient-bg-hero" />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary-100/30 blur-[100px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-accent-100/20 blur-[80px] translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+      <div className="hidden md:block absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary-100/30 blur-[100px] -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+      <div className="hidden md:block absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-accent-100/20 blur-[80px] translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
       {/* Decorative wave — thin on the left, expanding to the right */}
       <svg
@@ -171,7 +171,7 @@ export function HeroSection({
           {hasImage && (
             <div className="flex justify-center lg:justify-end animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <div className="relative w-full max-w-lg">
-                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary-200/30 via-accent-200/20 to-transparent blur-2xl pointer-events-none" />
+                <div className="hidden md:block absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary-200/30 via-accent-200/20 to-transparent blur-2xl pointer-events-none" />
                 <Image
                   src={image.src}
                   alt={image.alt}
