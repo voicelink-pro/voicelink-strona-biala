@@ -69,7 +69,7 @@ export function FeaturesGrid() {
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary-200/20 via-accent-200/10 to-transparent blur-2xl pointer-events-none" />
             <div className="relative overflow-hidden rounded-2xl border border-surface-200/80 shadow-[var(--shadow-elevated)] bg-white">
               <Image
-                src="/images/panel-voicelink-center.jpg"
+                src="/images/panel-voicelink-center.png"
                 alt="VoiceLink Center — panel analityczny dla placówek medycznych"
                 width={1200}
                 height={700}

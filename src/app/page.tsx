@@ -19,12 +19,6 @@ const homepageFAQ = faqItems;
 export default function HomePage() {
   return (
     <>
-      <link
-        rel="preload"
-        as="image"
-        href="/images/babcia.jpg"
-        type="image/jpeg"
-      />
       <JsonLd data={generateProductSchema()} />
       <JsonLd data={generateFAQSchema(homepageFAQ)} />
 

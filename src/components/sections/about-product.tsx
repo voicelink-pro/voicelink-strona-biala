@@ -31,7 +31,7 @@ export function AboutProduct() {
             <div className="relative w-full max-w-md">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary-200/30 via-accent-200/20 to-transparent blur-2xl pointer-events-none" />
               <Image
-                src="/images/telefon.jpg"
+                src="/images/telefon.png"
                 alt="VoiceLink — inteligentna recepcja głosowa"
                 width={500}
                 height={600}

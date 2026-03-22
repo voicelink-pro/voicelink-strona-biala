@@ -272,7 +272,7 @@ export default function PanelVoiceLinkCenterPage() {
               <div className="rounded-2xl border border-surface-200/80 bg-white p-2 shadow-[var(--shadow-card)] overflow-hidden">
                 <div className="relative aspect-[16/9] rounded-xl bg-gradient-to-br from-surface-50 to-surface-100 flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/images/panel-voicelink-center.jpg"
+                    src="/images/panel-voicelink-center.png"
                     alt="VoiceLink Center — panel analityczny dla placówek medycznych"
                     fill
                     className="object-cover object-top"

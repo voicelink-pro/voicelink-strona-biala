@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
-const CookieBanner = dynamic(() => import("@/components/cookie-banner").then((m) => m.CookieBanner));
 const ScrollTracker = dynamic(() => import("@/components/scroll-tracker").then((m) => m.ScrollTracker));
 import { JsonLd } from "@/components/json-ld";
 import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/schema";
@@ -104,7 +103,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <CookieBanner />
         <ScrollTracker />
       </body>
     </html>
