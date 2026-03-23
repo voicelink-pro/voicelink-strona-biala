@@ -120,8 +120,7 @@ export function IndustryCards() {
                           alt={iconData.alt}
                           width={96}
                           height={96}
-                          className="h-5 w-5 object-contain"
-                          quality={90}
+                          className="h-11 w-11 object-contain"
                         />
                       )}
                     </div>

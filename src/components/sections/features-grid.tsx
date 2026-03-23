@@ -99,8 +99,7 @@ export function FeaturesGrid() {
                     alt=""
                     width={96}
                     height={96}
-                    className="h-5 w-5 object-contain"
-                    quality={90}
+                    className="h-11 w-11 object-contain"
                   />
                 </div>
                 <h4 className="text-[15px] font-semibold text-primary-950">{title}</h4>
