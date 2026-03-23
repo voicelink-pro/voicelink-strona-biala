@@ -11,7 +11,7 @@ const OUTPUT = join(import.meta.dirname, "..", "src", "content", "blog.ts");
 
 const AUTHORS = [
   { name: "Karol Kulis", role: "Założyciel VoiceLink", avatar: "/images/karol.webp" },
-  { name: "Jan Kulis", role: "Dyrektor sprzedaży", avatar: "/images/jan.webp" },
+  { name: "Jan Zieliński", role: "Dyrektor sprzedaży", avatar: "/images/jan.webp" },
 ];
 
 const CATEGORY_COVER_MAP = {
