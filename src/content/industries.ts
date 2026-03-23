@@ -62,7 +62,7 @@ export const industries: Industry[] = [
     shortDescription:
       "Profesjonalna obsługa telefoniczna AI dla klinik prywatnych i specjalistycznych.",
     description:
-      "VoiceLink zapewnia klinikom prywatnym premium obsługę telefoniczną na miarę ich wizerunku. Inteligentna recepcja głosowa obsługuje pacjentów z najwyższym standardem.",
+      "VoiceLink zapewnia klinikom prywatnym obsługę telefoniczną w tym samym standardzie co ich marka premium. Inteligentna recepcja głosowa trzyma poziom godny prestiżowej placówki.",
     heroTitle: "AI Recepcja dla Klinik",
     heroDescription:
       "Zapewnij pacjentom Twojej kliniki obsługę telefoniczną na najwyższym poziomie. VoiceLink obsługuje połączenia profesjonalnie i spójnie z wizerunkiem Twojej marki.",

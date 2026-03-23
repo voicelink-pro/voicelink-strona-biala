@@ -36,7 +36,7 @@ const securityFeatures = [
   {
     icon: Timer,
     title: "Retencja danych 30 dni",
-    description: "Transkrypcje i logi rozmów przechowywane przez 30 dni, po czym automatycznie usuwane. Pełna kontrola nad danymi.",
+    description: "Logi rozmów przechowywane przez 30 dni, po czym automatycznie usuwane. Pełna kontrola nad danymi.",
   },
 ];
 

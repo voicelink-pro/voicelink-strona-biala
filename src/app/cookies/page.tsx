@@ -95,7 +95,7 @@ export default function CookiesPage() {
             <p>
               Pytania dotyczące cookies kieruj na:
               <br />
-              Email: <a href="mailto:prywatnosc@voicelink.pl">prywatnosc@voicelink.pl</a>
+              Email: <a href="mailto:kontakt@voicelink.pl">kontakt@voicelink.pl</a>
             </p>
           </div>
         </Container>

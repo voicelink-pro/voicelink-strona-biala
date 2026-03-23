@@ -49,7 +49,7 @@ const topicCards = [
   {
     href: "/technologia-ai",
     title: "Technologia AI",
-    desc: "Jak działa sztuczna inteligencja głosowa? Speech-to-Text, modele AI, Text-to-Speech od ElevenLabs — wszystko w ułamku sekundy. Koniec ery robotycznych IVR.",
+    desc: "Jak działa sztuczna inteligencja głosowa? Speech-to-Text, modele AI, Text-to-Speech — wszystko w ułamku sekundy. Koniec ery robotycznych IVR.",
     icon: Cpu,
     color: "accent" as const,
   },

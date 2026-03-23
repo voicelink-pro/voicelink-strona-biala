@@ -157,7 +157,7 @@ function Flowchart() {
 
         <div className={`flex items-center gap-3 p-4 rounded-xl border transition-all duration-500 ${stepActive(4) ? "border-emerald-200 bg-emerald-50/50" : "border-surface-200/80 bg-surface-50/50"}`}>
           <BarChart3 className={`h-5 w-5 transition-all duration-500 ${stepActive(4) ? "text-emerald-600" : "text-surface-300"}`} />
-          <span className={`text-sm transition-all duration-500 ${stepActive(4) ? "text-primary-950 font-medium" : "text-surface-400"}`}>Raport + transkrypcja do panelu</span>
+          <span className={`text-sm transition-all duration-500 ${stepActive(4) ? "text-primary-950 font-medium" : "text-surface-400"}`}>Raport do panelu</span>
         </div>
       </div>
     </div>
@@ -641,7 +641,7 @@ export default function RecepcjonistkaAIPage() {
                     "Ilość utworzonych rezerwacji i potwierdzeń",
                     "Procent przekierowań do personelu",
                     "Wpływ na redukcję no-show",
-                    "Pełne transkrypcje rozmów",
+                    "Pełne logi rozmów",
                     "Powiadomienia e-mail i SMS",
                   ].map((text) => (
                     <div key={text} className="flex items-center gap-3">

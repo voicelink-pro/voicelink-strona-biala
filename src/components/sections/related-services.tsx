@@ -25,7 +25,7 @@ const allServices: ServiceLink[] = [
   { title: "Automatyzacja rozmów", description: "Zautomatyzuj powtarzalne scenariusze telefoniczne.", href: "/uslugi/automatyzacja-rozmow", icon: PhoneCall },
   { title: "Rezerwacje online", description: "Automatyczne umawianie wizyt z kalendarzem placówki.", href: "/uslugi/rezerwacje-online", icon: CalendarCheck },
   { title: "Obsługa klienta 24/7", description: "Całodobowy asystent AI dla pacjentów.", href: "/uslugi/obsluga-klienta-247", icon: Clock },
-  { title: "Panel VoiceLink Center", description: "Analityka, transkrypcje i raporty w jednym miejscu.", href: "/uslugi/panel-voicelink-center", icon: LayoutDashboard },
+  { title: "Panel VoiceLink Center", description: "Analityka, statystyki i raporty w jednym miejscu.", href: "/uslugi/panel-voicelink-center", icon: LayoutDashboard },
 ];
 
 interface RelatedServicesProps {

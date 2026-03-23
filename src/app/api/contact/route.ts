@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { sendContactNotification } from "@/lib/email";
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -45,15 +46,19 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Send to email service / CRM / webhook
-    console.log("[CONTACT FORM]", {
-      ...result.data,
-      timestamp: new Date().toISOString(),
-      ip,
-    });
+    if (!process.env.RESEND_API_KEY) {
+      console.error("[CONTACT FORM] Brak RESEND_API_KEY");
+      return NextResponse.json(
+        { error: "Serwis e-mail nie jest skonfigurowany." },
+        { status: 503 }
+      );
+    }
+
+    await sendContactNotification(result.data);
 
     return NextResponse.json({ success: true, message: "Wiadomość została wysłana." });
-  } catch {
+  } catch (err) {
+    console.error("[CONTACT FORM]", err);
     return NextResponse.json(
       { error: "Wystąpił błąd serwera. Spróbuj ponownie." },
       { status: 500 }

@@ -34,7 +34,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Czy mam wgląd w rozmowy prowadzone przez AI?",
     answer:
-      "Tak. W panelu VoiceLink Center masz dostęp do transkrypcji wszystkich rozmów, logów i szczegółowych statystyk. Możesz analizować jakość obsługi, sprawdzać co pacjenci pytają najczęściej i doskonalić działanie agenta.",
+      "Tak. W panelu VoiceLink Center masz dostęp do logów wszystkich rozmów i szczegółowych statystyk. Możesz analizować jakość obsługi, sprawdzać co pacjenci pytają najczęściej i doskonalić działanie agenta.",
     category: "product",
   },
   {
@@ -58,7 +58,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Jak zabezpieczone są dane pacjentów?",
     answer:
-      "Stosujemy wielowarstwowe zabezpieczenia: szyfrowanie end-to-end połączeń, szyfrowanie AES-256 danych w spoczynku, kontrolę dostępu opartą na rolach oraz regularne audyty bezpieczeństwa. Transkrypcje i logi rozmów przechowujemy przez 30 dni, po czym są automatycznie usuwane.",
+      "Stosujemy wielowarstwowe zabezpieczenia: szyfrowanie end-to-end połączeń, szyfrowanie AES-256 danych w spoczynku, kontrolę dostępu opartą na rolach oraz regularne audyty bezpieczeństwa. Logi rozmów przechowujemy przez 30 dni, po czym są automatycznie usuwane.",
     category: "security",
   },
   {

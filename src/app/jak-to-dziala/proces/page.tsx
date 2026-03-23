@@ -68,7 +68,7 @@ const timelineSteps = [
   {
     num: "06", title: "Raportowanie i analiza", color: "emerald" as const,
     desc: "Po każdej rozmowie system generuje dane, które dają kontrolę i możliwość optymalizacji.",
-    checks: ["Transkrypcja rozmowy", "Log rozmowy z detalami", "Statystyki i analityka", "Szczegółowy raport w panelu"],
+    checks: ["Log rozmowy z detalami", "Statystyki i analityka", "Szczegółowy raport w panelu"],
   },
 ];
 

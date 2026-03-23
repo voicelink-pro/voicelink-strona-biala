@@ -222,7 +222,7 @@ export default function RegulaminPage() {
                   "nazwy firm,",
                   "imiona i nazwiska,",
                   "numery telefonów, adresy e-mail,",
-                  "transkrypcje rozmów, logi komunikacji.",
+                  "logi komunikacji.",
                 ].map((t) => (
                   <div key={t} className="flex items-start text-surface-600">
                     <span className="text-primary-500 mr-3 mt-1">•</span>

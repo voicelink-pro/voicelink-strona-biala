@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Mail, MapPin, Phone, Bot } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { footerColumns, type FooterColumn } from "@/content/navigation";
+import { siteContact } from "@/content/contact";
 import { trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 
 function NavColumn({ groups }: { groups: FooterColumn[] }) {
@@ -82,35 +83,38 @@ export function Footer() {
 
             <div className="mt-6 space-y-2.5">
               <a
-                href="tel:+48603076043"
-                onClick={() => trackPhoneClick("+48603076043")}
+                href={`tel:${siteContact.phones[0].tel}`}
+                onClick={() => trackPhoneClick(siteContact.phones[0].tel)}
                 className="flex items-center gap-2.5 text-sm text-surface-500 hover:text-primary-500 transition-colors"
               >
                 <Phone className="h-3.5 w-3.5 shrink-0" />
-                +48 603 076 043
+                {siteContact.phones[0].display}
               </a>
               <a
-                href="tel:+48732098417"
-                onClick={() => trackPhoneClick("+48732098417")}
+                href={`tel:${siteContact.phones[1].tel}`}
+                onClick={() => trackPhoneClick(siteContact.phones[1].tel)}
                 className="flex items-center gap-2.5 text-sm text-surface-500 hover:text-primary-500 transition-colors"
               >
                 <Bot className="h-3.5 w-3.5 shrink-0" />
-                +48 732 098 417
+                {siteContact.phones[1].display}
                 <span className="text-[10px] font-medium text-primary-500 bg-primary-50 rounded-full px-1.5 py-0.5 leading-none">
                   Test AI
                 </span>
               </a>
               <a
-                href="mailto:kontakt@voicelink.pl"
-                onClick={() => trackEmailClick("kontakt@voicelink.pl")}
+                href={`mailto:${siteContact.email}`}
+                onClick={() => trackEmailClick(siteContact.email)}
                 className="flex items-center gap-2.5 text-sm text-surface-500 hover:text-primary-500 transition-colors"
               >
                 <Mail className="h-3.5 w-3.5 shrink-0" />
-                kontakt@voicelink.pl
+                {siteContact.email}
               </a>
-              <div className="flex items-center gap-2.5 text-sm text-surface-500">
-                <MapPin className="h-3.5 w-3.5 shrink-0" />
-                Łysomice, Polska
+              <div className="flex items-start gap-2.5 text-sm text-surface-500">
+                <MapPin className="h-3.5 w-3.5 shrink-0 mt-0.5" />
+                <span>
+                  {siteContact.addressLine}
+                  <span className="text-surface-400"> ({siteContact.addressShort})</span>
+                </span>
               </div>
             </div>
           </div>

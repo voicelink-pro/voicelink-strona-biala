@@ -164,7 +164,7 @@ export default function PanelVoiceLinkCenterPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Usługi", href: "/uslugi" }, { name: "Panel VoiceLink Center", href: "/uslugi/panel-voicelink-center" }]} />
-      <JsonLd data={generateServiceSchema({ name: "Panel VoiceLink Center", description: "Zaawansowany panel analityczny — transkrypcje, statystyki, trendy i raporty ROI.", url: "/uslugi/panel-voicelink-center" })} />
+      <JsonLd data={generateServiceSchema({ name: "Panel VoiceLink Center", description: "Zaawansowany panel analityczny — statystyki, trendy i raporty ROI.", url: "/uslugi/panel-voicelink-center" })} />
 
       {/* ── HERO ── */}
       <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-32">

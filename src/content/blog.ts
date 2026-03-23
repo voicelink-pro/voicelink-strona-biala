@@ -6642,7 +6642,7 @@ W modelu SaaS wszystkie te aktualizacje leżą po stronie dostawcy — i są wli
   },
   {
     slug: "voicebot-box-vs-custom-vs-saas-klinika",
-    title: "Voicebot 'z Pudełka' czy Szyta na Miarę? Jak Wybrać Właściwe Podejście dla Swojej Kliniki",
+    title: "Voicebot z pudełka czy projekt dedykowany? Jak wybrać właściwy model dla swojej kliniki",
     excerpt: "Rynek oferuje dziś voiceboty medyczne \"z pudełka\" w atrakcyjnych cenach. Instalacja w jeden dzień, gotowe skrypty rejestracyjne, prosty panel. Dla kliniki internistycznej z jednym lekarzem i standa...",
     content: `<h2>Gotowy bot za 299 zł miesięcznie. Brzmi świetnie — dopóki nie trafisz na swojego pierwszego pacjenta kardiologicznego.</h2>
 
@@ -6650,11 +6650,11 @@ W modelu SaaS wszystkie te aktualizacje leżą po stronie dostawcy — i są wli
 
 <p>Ale klinika kardiologiczna, która chce zebrać od pacjenta ciśnienie przed wizytą, albo poradnia alergologiczna zarządzająca harmonogramem odczulania co 3–4 tygodnie, albo szpital jednego dnia koordynujący zgody medyczne i instrukcje na czczo — szybko odkryją, że "pudełko" ma swój kształt. I ten kształt nie pasuje do ich procedur.</p>
 
-<p>Z drugiej strony — zamówienie systemu "szytego na miarę" u software house'u to projekt na rok i budżet, który zamraża inne inwestycje. Gdzieś pośrodku jest trzecia droga.</p>
+<p>Z drugiej strony — pełne wdrożenie pisane od zera na zamówienie (custom) u software house'u to projekt na rok i budżet, który zamraża inne inwestycje. Gdzieś pośrodku jest trzecia droga.</p>
 
 <h2>Trzy modele na osi: elastyczność vs. koszt vs. czas</h2>
 
-<p>\`\`<code> [Box — gotowy]  ←————————→  [Konfigurowalne SaaS]  ←————————→  [Custom — szyte na miarę] Niska elastyczność              Wysoka elastyczność               Pełna elastyczność Niski koszt startowy            Średni koszt stały                Wysoki koszt startowy Szybkie wdrożenie               Szybkie wdrożenie                 Długie wdrożenie Brak konfiguracji               Konfiguracja bez kodu             Konfiguracja przez kod </code>\`\`</p>
+<p>\`\`<code> [Box — gotowy]  ←————————→  [Konfigurowalne SaaS]  ←————————→  [Custom — projekt od zera] Niska elastyczność              Wysoka elastyczność               Pełna elastyczność Niski koszt startowy            Średni koszt stały                Wysoki koszt startowy Szybkie wdrożenie               Szybkie wdrożenie                 Długie wdrożenie Brak konfiguracji               Konfiguracja bez kodu             Konfiguracja przez kod </code>\`\`</p>
 
 <p>VoiceLink zajmuje pozycję środkową — konfigurowalne SaaS z głęboką domeną medyczną. Nie przypadkową elastycznością "wszystko można przez API", ale przemyślaną konfigurowalnością dla specyfiki polskiej ochrony zdrowia.</p>
 
@@ -6676,7 +6676,7 @@ W modelu SaaS wszystkie te aktualizacje leżą po stronie dostawcy — i są wli
 
 <p>Każdy z tych scenariuszy wymaga logiki dostosowanej do specyfiki klinicznej — i żaden gotowy bot jej nie ma.</p>
 
-<h2>Model 2: System szyte na miarę — kiedy ma sens, a kiedy nie?</h2>
+<h2>Model 2: Projekt dedykowany (custom) — kiedy ma sens, a kiedy nie?</h2>
 
 <p><strong>Co dostajemy:</strong> Pełna kontrola nad każdym aspektem systemu. Bot robi dokładnie to, czego chcemy, w dokładnie taki sposób.</p>
 
@@ -6703,7 +6703,7 @@ Konfigurowalne SaaS pozwala na konfigurację — i to wystarczy dla 90%+ potrzeb
 
 <p><strong>3-letni TCO porównanie:</strong></p>
 
-<table><thead><tr><th>Model</th><th>Rok 1</th><th>Rok 2</th><th>Rok 3</th><th>TCO 3-letni</th></tr></thead><tbody><tr><td>Box (gotowy)</td><td>~5 000 PLN</td><td>~5 000 PLN</td><td>~5 000 PLN</td><td>~15 000 PLN</td></tr><tr><td>Custom (szyte na miarę)</td><td>~300 000 PLN</td><td>~60 000 PLN</td><td>~60 000 PLN</td><td>~420 000 PLN</td></tr><tr><td>Konfigurowalne SaaS</td><td>~20 000 PLN</td><td>~18 000 PLN</td><td>~18 000 PLN</td><td>~56 000 PLN</td></tr></tbody></table>
+<table><thead><tr><th>Model</th><th>Rok 1</th><th>Rok 2</th><th>Rok 3</th><th>TCO 3-letni</th></tr></thead><tbody><tr><td>Box (gotowy)</td><td>~5 000 PLN</td><td>~5 000 PLN</td><td>~5 000 PLN</td><td>~15 000 PLN</td></tr><tr><td>Custom (dedykowany)</td><td>~300 000 PLN</td><td>~60 000 PLN</td><td>~60 000 PLN</td><td>~420 000 PLN</td></tr><tr><td>Konfigurowalne SaaS</td><td>~20 000 PLN</td><td>~18 000 PLN</td><td>~18 000 PLN</td><td>~56 000 PLN</td></tr></tbody></table>
 <em>Wartości orientacyjne. Box: niska cena, ale bez możliwości pokrycia złożonych procedur — często prowadzi do drugiego wdrożenia. Custom: pełna elastyczność, ale koszt rzędu 400k PLN przez 3 lata przy utrzymaniu.</em>
 
 <h2>Jak zdecydować — checklisty dla każdego profilu kliniki</h2>
@@ -6731,7 +6731,7 @@ Konfigurowalne SaaS pozwala na konfigurację — i to wystarczy dla 90%+ potrzeb
     readTime: 6,
     keywords: ["gotowy bot medyczny vs dedykowany","SaaS voicebot klinika elastyczność","build vs buy AI medycyna","konfigurowalny voicebot przychodnia"],
     metaTitle: "Box vs. Custom vs. Konfigurowalne SaaS – Który Model AI Sprawdzi ",
-    metaDescription: "Gotowy voicebot 'z pudełka' czy system szyte na miarę? A może konfigurowalne SaaS? Porównanie trzech modeli AI dla kliniki – koszt, elastyczność, czas wdrożenia",
+    metaDescription: "Gotowy voicebot z pudełka czy projekt dedykowany? A może konfigurowalne SaaS? Porównanie trzech modeli AI dla kliniki – koszt, elastyczność, czas wdrożenia",
   },
   {
     slug: "voicebot-diagnostyka-obrazowa-mri-tk-rtg",

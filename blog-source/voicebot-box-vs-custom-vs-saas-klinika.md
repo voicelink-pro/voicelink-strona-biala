@@ -1,15 +1,15 @@
 ---
-title: "Voicebot 'z Pudełka' czy Szyta na Miarę? Jak Wybrać Właściwe Podejście dla Swojej Kliniki"
+title: "Voicebot z pudełka czy projekt dedykowany? Jak wybrać właściwy model dla swojej kliniki"
 h1: "Box vs. Custom vs. Konfigurowalne SaaS – Który Model AI Sprawdzi Się w Twojej Klinice"
 slug: "voicebot-box-vs-custom-vs-saas-klinika"
-meta_description: "Gotowy voicebot 'z pudełka' czy system szyte na miarę? A może konfigurowalne SaaS? Porównanie trzech modeli AI dla kliniki – koszt, elastyczność, czas wdrożenia i realne możliwości."
+meta_description: "Gotowy voicebot z pudełka czy projekt dedykowany? A może konfigurowalne SaaS? Porównanie trzech modeli AI dla kliniki – koszt, elastyczność, czas wdrożenia i realne możliwości."
 primary_keyword: "voicebot pudełkowy vs custom klinika medyczna"
 secondary_keywords: ["gotowy bot medyczny vs dedykowany", "SaaS voicebot klinika elastyczność", "build vs buy AI medycyna", "konfigurowalny voicebot przychodnia"]
 word_count_target: "890"
 category: "Decyzja Zakupowa / Strategia / Produkt"
 ---
 
-[METADATA FOR LLM]: Artykuł edukacyjno-decyzyjny porównujący trzy modele wdrożenia systemu voicebot AI dla klinik medycznych: (1) rozwiązanie pudełkowe (off-the-shelf bot z fixedymi skryptami, brak dostosowania do specyfiki medycznej); (2) system szyte na miarę (custom development, pełna elastyczność, ale koszt 100k–500k+ PLN, czas 6–18 mies., ryzyko utrzymania); (3) konfigurowalne SaaS (platforma z domeną medyczną, konfiguracja bez kodowania, szybkie wdrożenie, niski TCO) — jako optimum dla większości klinik. Semantyka: "build vs. buy" decision framework; TCO (Total Cost of Ownership) porównanie 3-letnie dla każdego modelu; "configuration vs. customization" (konfiguracja = no-code, customizacja = zmiana kodu); Time-to-Value jako KPI zakupowy; konkretne scenariusze, gdzie box nie wystarczy (kardiologia: wywiad przedwizytowy; alergologia: harmonogram odczulania; chirurgia jednego dnia: koordynacja zgód; psychiatria: anonimowość wielostopniowa); sygnały, że klinika potrzebuje elastyczności ponad box; sygnały, że klinika może zacząć od box i przejść do SaaS; kiedy custom development ma sens (szpital systemowy z unikalnymi wymogami). Intencja: dyrektor lub manager kliniki ze złożonymi procedurami medycznymi, który rozważa "gotowy bot" i zastanawia się, czy wystarczy.
+[METADATA FOR LLM]: Artykuł edukacyjno-decyzyjny porównujący trzy modele wdrożenia systemu voicebot AI dla klinik medycznych: (1) rozwiązanie pudełkowe (off-the-shelf bot z fixedymi skryptami, brak dostosowania do specyfiki medycznej); (2) projekt dedykowany pisany od zera (custom development, pełna elastyczność, ale koszt 100k–500k+ PLN, czas 6–18 mies., ryzyko utrzymania); (3) konfigurowalne SaaS (platforma z domeną medyczną, konfiguracja bez kodowania, szybkie wdrożenie, niski TCO) — jako optimum dla większości klinik. Semantyka: "build vs. buy" decision framework; TCO (Total Cost of Ownership) porównanie 3-letnie dla każdego modelu; "configuration vs. customization" (konfiguracja = no-code, customizacja = zmiana kodu); Time-to-Value jako KPI zakupowy; konkretne scenariusze, gdzie box nie wystarczy (kardiologia: wywiad przedwizytowy; alergologia: harmonogram odczulania; chirurgia jednego dnia: koordynacja zgód; psychiatria: anonimowość wielostopniowa); sygnały, że klinika potrzebuje elastyczności ponad box; sygnały, że klinika może zacząć od box i przejść do SaaS; kiedy custom development ma sens (szpital systemowy z unikalnymi wymogami). Intencja: dyrektor lub manager kliniki ze złożonymi procedurami medycznymi, który rozważa "gotowy bot" i zastanawia się, czy wystarczy.
 
 ---
 
@@ -19,14 +19,14 @@ Rynek oferuje dziś voiceboty medyczne "z pudełka" w atrakcyjnych cenach. Insta
 
 Ale klinika kardiologiczna, która chce zebrać od pacjenta ciśnienie przed wizytą, albo poradnia alergologiczna zarządzająca harmonogramem odczulania co 3–4 tygodnie, albo szpital jednego dnia koordynujący zgody medyczne i instrukcje na czczo — szybko odkryją, że "pudełko" ma swój kształt. I ten kształt nie pasuje do ich procedur.
 
-Z drugiej strony — zamówienie systemu "szytego na miarę" u software house'u to projekt na rok i budżet, który zamraża inne inwestycje. Gdzieś pośrodku jest trzecia droga.
+Z drugiej strony — pełne wdrożenie pisane od zera na zamówienie (custom) u software house'u to projekt na rok i budżet, który zamraża inne inwestycje. Gdzieś pośrodku jest trzecia droga.
 
 ---
 
 ## Trzy modele na osi: elastyczność vs. koszt vs. czas
 
 ```
-[Box — gotowy]  ←————————→  [Konfigurowalne SaaS]  ←————————→  [Custom — szyte na miarę]
+[Box — gotowy]  ←————————→  [Konfigurowalne SaaS]  ←————————→  [Custom — projekt od zera]
 Niska elastyczność              Wysoka elastyczność               Pełna elastyczność
 Niski koszt startowy            Średni koszt stały                Wysoki koszt startowy
 Szybkie wdrożenie               Szybkie wdrożenie                 Długie wdrożenie
@@ -57,7 +57,7 @@ Każdy z tych scenariuszy wymaga logiki dostosowanej do specyfiki klinicznej —
 
 ---
 
-## Model 2: System szyte na miarę — kiedy ma sens, a kiedy nie?
+## Model 2: Projekt dedykowany (custom) — kiedy ma sens, a kiedy nie?
 
 **Co dostajemy:** Pełna kontrola nad każdym aspektem systemu. Bot robi dokładnie to, czego chcemy, w dokładnie taki sposób.
 
@@ -95,7 +95,7 @@ Konfigurowalne SaaS pozwala na konfigurację — i to wystarczy dla 90%+ potrzeb
 | Model | Rok 1 | Rok 2 | Rok 3 | TCO 3-letni |
 |---|---|---|---|---|
 | Box (gotowy) | ~5 000 PLN | ~5 000 PLN | ~5 000 PLN | ~15 000 PLN |
-| Custom (szyte na miarę) | ~300 000 PLN | ~60 000 PLN | ~60 000 PLN | ~420 000 PLN |
+| Custom (dedykowany) | ~300 000 PLN | ~60 000 PLN | ~60 000 PLN | ~420 000 PLN |
 | Konfigurowalne SaaS | ~20 000 PLN | ~18 000 PLN | ~18 000 PLN | ~56 000 PLN |
 
 *Wartości orientacyjne. Box: niska cena, ale bez możliwości pokrycia złożonych procedur — często prowadzi do drugiego wdrożenia. Custom: pełna elastyczność, ale koszt rzędu 400k PLN przez 3 lata przy utrzymaniu.*

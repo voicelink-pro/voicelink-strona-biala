@@ -43,7 +43,7 @@ const services = [
   },
   {
     title: "Panel VoiceLink Center",
-    description: "Zaawansowany panel analityczny: transkrypcje rozmów, statystyki, trendy i raporty ROI. Pełna kontrola nad asystentem AI.",
+    description: "Zaawansowany panel analityczny: statystyki, trendy i raporty ROI. Pełna kontrola nad asystentem AI.",
     href: "/uslugi/panel-voicelink-center",
     icon: LayoutDashboard,
   },

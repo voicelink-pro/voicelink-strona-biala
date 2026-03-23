@@ -18,7 +18,7 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 const demoFeatures = [
   { title: "Rozmowa na żywo z AI", desc: "Zadzwonimy do Ciebie z demonstracją — porozmawiasz z agentem AI skonfigurowanym pod Twoją branżę. Przekonasz się, jak naturalnie brzmi.", icon: Phone, color: "accent" as const },
-  { title: "Rozwiązanie szyte na miarę", desc: "Pokażemy, jak budujemy dedykowanego agenta AI pod Twój system rezerwacji, kalendarz lekarzy i specyfikę placówki. To nie gotowy produkt — to infrastruktura dopasowana do Ciebie.", icon: ClipboardList, color: "primary" as const },
+  { title: "Wdrożenie klasy premium pod Twoją placówkę", desc: "Pokażemy, jak budujemy dedykowanego agenta AI pod Twój system rezerwacji, kalendarz lekarzy i specyfikę placówki. To nie gotowy produkt — to infrastruktura dopasowana do Ciebie.", icon: ClipboardList, color: "primary" as const },
   { title: "Indywidualna wycena", desc: "Otrzymasz konkretną wycenę i harmonogram wdrożenia — dostosowany do wielkości placówki, liczby integracji i złożoności scenariuszy.", icon: Calculator, color: "emerald" as const },
 ];
 

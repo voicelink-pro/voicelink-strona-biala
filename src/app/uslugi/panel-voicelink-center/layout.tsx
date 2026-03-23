@@ -4,7 +4,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = generatePageMetadata({
   title: "Panel VoiceLink Center — Analityka i Zarządzanie Rozmowami",
   description:
-    "Zaawansowany panel analityczny do zarządzania asystentem AI. Transkrypcje rozmów, statystyki, trendy i raporty ROI — wszystko w jednym miejscu.",
+    "Zaawansowany panel analityczny do zarządzania asystentem AI. Statystyki, trendy i raporty ROI — wszystko w jednym miejscu.",
   path: "/uslugi/panel-voicelink-center",
   keywords: [
     "panel VoiceLink",

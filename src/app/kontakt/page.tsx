@@ -4,6 +4,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { Container, Section } from "@/components/ui/container";
 import { ContactForm } from "@/components/forms/contact-form";
+import { siteContact } from "@/content/contact";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Kontakt — Skontaktuj się z VoiceLink",
@@ -13,29 +14,36 @@ export const metadata: Metadata = generatePageMetadata({
   keywords: ["kontakt VoiceLink", "VoiceLink telefon", "VoiceLink email"],
 });
 
+/** Kolejność pod siatką 2-kolumnową: email | tel. główny, adres | tel. testowy — oba telefony w jednej kolumnie pod sobą */
 const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "kontakt@voicelink.pl",
-    href: "mailto:kontakt@voicelink.pl",
+    value: siteContact.email,
+    href: `mailto:${siteContact.email}`,
   },
   {
     icon: Phone,
-    title: "Telefon",
-    value: "+48 000 000 000",
-    href: "tel:+48000000000",
+    title: siteContact.phones[0].label,
+    value: siteContact.phones[0].display,
+    href: `tel:${siteContact.phones[0].tel}`,
   },
   {
     icon: MapPin,
     title: "Adres",
-    value: "Warszawa, Polska",
+    value: siteContact.addressLine,
     href: undefined,
+  },
+  {
+    icon: Phone,
+    title: siteContact.phones[1].label,
+    value: siteContact.phones[1].display,
+    href: `tel:${siteContact.phones[1].tel}`,
   },
   {
     icon: Clock,
     title: "Godziny kontaktu",
-    value: "Pon–Pt, 9:00–17:00",
+    value: siteContact.hours,
     href: undefined,
   },
 ];

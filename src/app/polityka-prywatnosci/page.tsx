@@ -15,14 +15,7 @@ export const metadata: Metadata = generatePageMetadata({
   noIndex: false,
 });
 
-const providers = [
-  { name: "OpenAI", desc: "generowanie odpowiedzi AI" },
-  { name: "ElevenLabs", desc: "generowanie głosu" },
-  { name: "Gladia", desc: "transkrypcje rozmów" },
-  { name: "Twilio", desc: "obsługa połączeń telefonicznych i SMS" },
-  { name: "Google Cloud", desc: "infrastruktura serwerowa" },
-  { name: "MySQL", desc: "baza danych" },
-];
+const providers: { name: string; desc: string }[] = [];
 
 const rights = [
   "dostępu do danych",
@@ -190,11 +183,6 @@ export default function PolitykaPrywatnosciPage() {
                 </Bullet>
                 <Bullet>treść rozmowy,</Bullet>
                 <Bullet>
-                  nagranie rozmowy (jeśli nagrywanie zostało aktywowane przez
-                  klienta),
-                </Bullet>
-                <Bullet>transkrypcja rozmowy,</Bullet>
-                <Bullet>
                   treść SMS wysłanych i odebranych w ramach obsługi,
                 </Bullet>
                 <Bullet>dane firmowe przekazane w rozmowie.</Bullet>
@@ -236,7 +224,6 @@ export default function PolitykaPrywatnosciPage() {
                     <Bullet>
                       wykonywanie połączeń wychodzących na zlecenie klienta,
                     </Bullet>
-                    <Bullet>tworzenie transkrypcji,</Bullet>
                     <Bullet>
                       wykonywanie akcji ustalonych przez klienta (np. umawianie
                       wizyt, tworzenie zamówień),
@@ -251,42 +238,6 @@ export default function PolitykaPrywatnosciPage() {
                   </ul>
                 </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-primary-950 mb-3">
-                    3.2. Nagrywanie rozmów
-                  </h3>
-                  <p className="text-surface-600 mb-2 leading-relaxed">
-                    Nagrywanie rozmów odbywa się wyłącznie na wyraźne polecenie
-                    klienta.
-                  </p>
-                  <p className="text-surface-600 mb-2 leading-relaxed">
-                    Klient jest zobowiązany do poinformowania swoich rozmówców o
-                    nagrywaniu rozmów zgodnie z przepisami prawa.
-                  </p>
-                  <p className="text-surface-600 leading-relaxed">
-                    <span className="font-semibold text-primary-950">
-                      Podstawa prawna:
-                    </span>{" "}
-                    art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes
-                    klienta.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-primary-950 mb-3">
-                    3.3. Tworzenie transkrypcji rozmów
-                  </h3>
-                  <p className="text-surface-600 mb-2 leading-relaxed">
-                    Tworzenie transkrypcji realizowane jest przy użyciu
-                    zewnętrznych dostawców technologii (np. Gladia).
-                  </p>
-                  <p className="text-surface-600 leading-relaxed">
-                    <span className="font-semibold text-primary-950">
-                      Podstawa prawna:
-                    </span>{" "}
-                    art. 6 ust. 1 lit. b RODO – wykonanie umowy.
-                  </p>
-                </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-primary-950 mb-3">
@@ -350,7 +301,6 @@ export default function PolitykaPrywatnosciPage() {
               <SectionTitle>5. Okres przechowywania danych</SectionTitle>
               <ul className="list-none space-y-3">
                 {[
-                  { label: "transkrypcje rozmów:", value: "30 dni" },
                   { label: "logi komunikacji:", value: "30 dni" },
                   {
                     label: "dane klientów w panelu:",

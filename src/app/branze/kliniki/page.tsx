@@ -54,7 +54,7 @@ const solutions = [
   { title: "Premium obsługa każdego połączenia", desc: "AI zapewnia identycznie profesjonalny poziom rozmowy — niezależnie od pory dnia czy obciążenia.", icon: Sparkles, color: "emerald" as const },
   { title: "Skalowalność bez limitów", desc: "10 czy 1000 połączeń dziennie — AI obsłuży każde bez dodatkowych kosztów i etatów.", icon: TrendingUp, color: "emerald" as const },
   { title: "Integracja z systemami kliniki", desc: "Połączenie z Twoim kalendarzem, CRM i systemami rezerwacyjnymi. Wizyty lądują automatycznie w grafiku.", icon: CalendarCheck, color: "emerald" as const },
-  { title: "Pełna kontrola i raporty", desc: "Transkrypcje, statystyki, trendy — dokładne dane o każdym połączeniu w panelu VoiceLink Center.", icon: BarChart3, color: "emerald" as const },
+  { title: "Pełna kontrola i raporty", desc: "Statystyki, trendy i raporty — dokładne dane o każdym połączeniu w panelu VoiceLink Center.", icon: BarChart3, color: "emerald" as const },
 ];
 
 const colorMap: Record<string, { bg: string; text: string }> = {
@@ -92,7 +92,7 @@ export default function KlinikiPage() {
             <FadeIn delay={0.1}>
               <h1 className="text-4xl font-extrabold tracking-tight text-primary-950 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
                 Kliniki <span className="text-primary-500">prywatne</span>
-                <br /><span className="text-surface-400 text-3xl sm:text-4xl font-light">Premium obsługa na miarę Twojej marki</span>
+                <br /><span className="text-surface-400 text-3xl sm:text-4xl font-light">Premium obsługa w tonie Twojej marki</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -215,7 +215,7 @@ export default function KlinikiPage() {
             {[
               { title: "Recepcjonistka AI", desc: "Wirtualna recepcjonistka obsługująca połączenia 24/7.", href: "/uslugi/recepcjonistka-ai", icon: Headphones },
               { title: "Rezerwacje online", desc: "Automatyczne umawianie wizyt zintegrowane z kalendarzem.", href: "/uslugi/rezerwacje-online", icon: CalendarCheck },
-              { title: "Panel VoiceLink Center", desc: "Analityka, transkrypcje i zarządzanie w jednym miejscu.", href: "/uslugi/panel-voicelink-center", icon: BarChart3 },
+              { title: "Panel VoiceLink Center", desc: "Analityka, statystyki i zarządzanie w jednym miejscu.", href: "/uslugi/panel-voicelink-center", icon: BarChart3 },
             ].map((s) => (
               <StaggerItem key={s.href}>
                 <Link href={s.href} className="block rounded-2xl border border-surface-200/80 bg-white p-7 h-full transition-all hover:shadow-[var(--shadow-card-hover)] hover:border-primary-200 group">
