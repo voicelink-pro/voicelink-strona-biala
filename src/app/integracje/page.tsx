@@ -128,7 +128,7 @@ export default function IntegracjePage() {
                 <div className="rounded-2xl border border-surface-200/80 bg-white p-8 h-full transition-all hover:shadow-[var(--shadow-card-hover)]">
                   <div className="flex items-center gap-5 mb-6">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden border border-surface-200/60 ${sys.lightBg ? "bg-white" : "bg-surface-50"}`}>
-                      <Image src={sys.logo} alt={`${sys.name} logo`} width={80} height={80} className={`object-contain ${sys.lightBg ? "p-2.5" : ""} ${sys.logoClass ?? ""}`} />
+                      <Image src={sys.logo} alt={`${sys.name} logo`} width={80} height={80} quality={90} className={`object-contain ${sys.lightBg ? "p-2.5" : ""} ${sys.logoClass ?? ""}`} />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-primary-950">{sys.name}</h3>

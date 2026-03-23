@@ -89,6 +89,7 @@ export function BlogPostContent({ post, related, catStyle }: BlogPostContentProp
             alt={post.title}
             fill
             sizes="100vw"
+            quality={92}
             className="object-cover"
             priority
           />
@@ -157,6 +158,7 @@ export function BlogPostContent({ post, related, catStyle }: BlogPostContentProp
                         alt={post.author.name}
                         width={44}
                         height={44}
+                        quality={85}
                         className="rounded-full object-cover ring-2 ring-white shadow-sm"
                       />
                     )}
@@ -269,6 +271,7 @@ export function BlogPostContent({ post, related, catStyle }: BlogPostContentProp
                       alt={post.author.name}
                       width={56}
                       height={56}
+                      quality={85}
                       className="mx-auto rounded-full object-cover ring-2 ring-surface-100"
                     />
                   )}

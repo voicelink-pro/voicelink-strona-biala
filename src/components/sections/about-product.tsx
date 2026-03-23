@@ -33,9 +33,10 @@ export function AboutProduct() {
               <Image
                 src="/images/telefon.png"
                 alt="VoiceLink — inteligentna recepcja głosowa"
-                width={500}
-                height={600}
-                sizes="(max-width: 1024px) 100vw, 400px"
+                width={1200}
+                height={1440}
+                sizes="(max-width: 1024px) 100vw, 448px"
+                quality={95}
                 className="relative w-full h-auto"
                 loading="lazy"
               />

@@ -277,6 +277,7 @@ export default function PanelVoiceLinkCenterPage() {
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 1024px) 100vw, 960px"
+                    quality={95}
                     priority
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-surface-50/80 opacity-0 hover:opacity-0 transition-opacity" />

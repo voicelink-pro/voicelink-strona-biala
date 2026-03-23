@@ -166,6 +166,7 @@ export function Navbar() {
               height={80}
               className="h-16 w-auto transition-opacity duration-200 group-hover:opacity-80"
               sizes="160px"
+              quality={92}
               priority
             />
           </Link>

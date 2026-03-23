@@ -97,10 +97,11 @@ export function SecurityHighlights() {
               <Image
                 src="/images/security.png"
                 alt="VoiceLink — bezpieczeństwo danych medycznych"
-                width={1200}
-                height={1200}
+                width={1600}
+                height={1600}
                 className="relative w-full h-auto"
-                sizes="(max-width: 1024px) 100vw, 60vw"
+                sizes="(max-width: 1024px) 100vw, min(900px, 60vw)"
+                quality={95}
               />
             </div>
           </FadeIn>

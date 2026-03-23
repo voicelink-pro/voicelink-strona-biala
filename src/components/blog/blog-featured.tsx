@@ -31,6 +31,7 @@ export function BlogFeatured({ post }: BlogFeaturedProps) {
                   alt={post.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={92}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
@@ -64,6 +65,7 @@ export function BlogFeatured({ post }: BlogFeaturedProps) {
                       alt={post.author.name}
                       width={32}
                       height={32}
+                      quality={85}
                       className="rounded-full object-cover"
                     />
                   )}

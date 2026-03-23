@@ -73,6 +73,7 @@ export function Footer() {
                 alt="VoiceLink"
                 width={280}
                 height={72}
+                quality={92}
                 className="h-14 w-auto transition-opacity duration-200 group-hover:opacity-70"
               />
             </Link>

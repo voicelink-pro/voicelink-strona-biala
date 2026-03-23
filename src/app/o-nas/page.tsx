@@ -94,11 +94,11 @@ export default function ONasPage() {
                   <div className="group h-full transition-all duration-500 hover:-translate-y-2">
                     <div className="rounded-3xl border border-surface-200/80 bg-white overflow-hidden h-full flex flex-col shadow-[var(--shadow-card)]">
                       <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-t-3xl">
-                        <Image src={m.photo} alt={m.alt} fill className="object-cover transition-transform duration-600 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image src={m.photo} alt={m.alt} fill quality={95} className="object-cover transition-transform duration-600 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
                         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg,transparent 50%,rgba(10,10,15,0.85) 100%)" }} />
                         {m.signature && (
                           <div className={`absolute right-4 z-20 ${m.signatureKey === "karol" ? "-bottom-12" : "-bottom-2"}`}>
-                            <Image src={m.signature} alt={`Podpis ${m.name}`} width={480} height={200} className={`${m.signatureKey === "karol" ? "h-44 sm:h-52" : "h-32 sm:h-40"} w-auto object-contain opacity-80 drop-shadow-lg`} />
+                            <Image src={m.signature} alt={`Podpis ${m.name}`} width={480} height={200} quality={95} className={`${m.signatureKey === "karol" ? "h-44 sm:h-52" : "h-32 sm:h-40"} w-auto object-contain opacity-80 drop-shadow-lg`} />
                           </div>
                         )}
                         <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
@@ -183,7 +183,7 @@ export default function ONasPage() {
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-8">
                 <div className="absolute inset-0 rounded-full blur-3xl opacity-10" style={{ background: "linear-gradient(135deg, var(--color-primary-300), var(--color-accent-300))", transform: "scale(0.7)" }} />
-                <Image src="/images/szklo.webp" alt="VoiceLink — technologia głosu AI" width={384} height={384} className="relative z-10 w-64 sm:w-80 md:w-96 h-auto" />
+                <Image src="/images/szklo.webp" alt="VoiceLink — technologia głosu AI" width={384} height={384} quality={95} className="relative z-10 w-64 sm:w-80 md:w-96 h-auto" />
               </div>
               <p className="text-lg text-surface-500 max-w-xl leading-relaxed">
                 Trzymamy <span className="text-primary-950 font-medium">przyszłość komunikacji</span> w swoich rękach. Technologia głosowa AI, która zmienia sposób obsługi pacjentów.

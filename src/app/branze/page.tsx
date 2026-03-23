@@ -163,7 +163,7 @@ export default function DlaPlacowekPage() {
                     <div className="relative">
                       <div className="absolute inset-0 rounded-full bg-primary-200/40 animate-ping" style={{ animationDuration: "3s" }} />
                       <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 border-2 border-primary-200 flex items-center justify-center overflow-hidden shadow-sm">
-                        <Image src="/images/logo.png" alt="VoiceLink" width={500} height={500} className="w-10 h-10 object-contain" />
+                        <Image src="/images/logo.png" alt="VoiceLink" width={500} height={500} quality={90} className="w-10 h-10 object-contain" />
                       </div>
                     </div>
                     <span className="text-primary-500 text-[10px] font-medium mt-1.5">VoiceLink</span>

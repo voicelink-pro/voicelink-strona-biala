@@ -69,10 +69,11 @@ export function FeaturesGrid() {
               <Image
                 src="/images/panel-voicelink-center.jpg"
                 alt="VoiceLink Center — panel analityczny dla placówek medycznych"
-                width={1200}
-                height={700}
+                width={1920}
+                height={1120}
                 className="w-full h-auto"
-                sizes="(max-width: 1200px) 100vw, 1200px"
+                sizes="(max-width: 1200px) 100vw, min(1200px, 96vw)"
+                quality={95}
                 loading="lazy"
               />
             </div>
@@ -96,9 +97,10 @@ export function FeaturesGrid() {
                   <Image
                     src={icon}
                     alt=""
-                    width={20}
-                    height={20}
-                    className="h-5 w-5 scale-[2.3] object-contain"
+                    width={96}
+                    height={96}
+                    className="h-5 w-5 object-contain"
+                    quality={90}
                   />
                 </div>
                 <h4 className="text-[15px] font-semibold text-primary-950">{title}</h4>

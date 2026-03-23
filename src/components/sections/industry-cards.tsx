@@ -118,9 +118,10 @@ export function IndustryCards() {
                         <Image
                           src={iconData.src}
                           alt={iconData.alt}
-                          width={20}
-                          height={20}
-                          className="h-5 w-5 scale-[2.3] object-contain"
+                          width={96}
+                          height={96}
+                          className="h-5 w-5 object-contain"
+                          quality={90}
                         />
                       )}
                     </div>

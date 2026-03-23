@@ -175,10 +175,11 @@ export function HeroSection({
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={image.width || 600}
-                  height={image.height || 500}
+                  width={image.width || 1200}
+                  height={image.height || 1000}
                   className="relative w-full h-auto rounded-2xl"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, min(512px, 50vw)"
+                  quality={95}
                   priority
                 />
 
