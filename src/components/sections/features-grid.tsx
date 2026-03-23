@@ -1,45 +1,43 @@
 "use client";
 
 import Image from "next/image";
-import {
-  CalendarCheck,
-  PhoneIncoming,
-  TrendingUp,
-  AlertTriangle,
-  Clock,
-  BarChart3,
-} from "lucide-react";
+import appointmentsBookedIcon from "@/components/icons/brand-appointments-booked.svg";
+import callAnsweredIcon from "@/components/icons/brand-call-answered.svg";
+import percentIcon from "@/components/icons/brand-percent.svg";
+import escalationIcon from "@/components/icons/brand-przekierownanie.svg";
+import timeIcon from "@/components/icons/brand-time.svg";
+import statsIcon from "@/components/icons/brand-stats.svg";
 import { Container, Section } from "@/components/ui/container";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 
 const metrics = [
   {
-    icon: CalendarCheck,
+    icon: appointmentsBookedIcon,
     title: "Umówione wizyty",
     description: "Ile wizyt agent zarezerwował automatycznie — dziennie, tygodniowo i miesięcznie.",
   },
   {
-    icon: PhoneIncoming,
+    icon: callAnsweredIcon,
     title: "Odbyte rozmowy",
     description: "Pełna historia połączeń z czasem trwania, statusem i wynikiem każdej rozmowy.",
   },
   {
-    icon: TrendingUp,
+    icon: percentIcon,
     title: "Procent skuteczności",
     description: "Jaki odsetek rozmów zakończył się realizacją celu — umówienie wizyty, odpowiedź na pytanie.",
   },
   {
-    icon: AlertTriangle,
+    icon: escalationIcon,
     title: "Eskalacje do człowieka",
     description: "Ile rozmów wymagało przekazania do personelu — i z jakiego powodu.",
   },
   {
-    icon: Clock,
+    icon: timeIcon,
     title: "Średni czas rozmowy",
     description: "Ile trwa przeciętna interakcja z pacjentem. Krótszy czas = wyższa efektywność.",
   },
   {
-    icon: BarChart3,
+    icon: statsIcon,
     title: "Trendy i raporty",
     description: "Porównania okresowe, godziny szczytu, najczęstsze pytania, wykresy i eksport danych.",
   },
@@ -91,11 +89,17 @@ export function FeaturesGrid() {
         </FadeIn>
 
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" delay={0.15}>
-          {metrics.map(({ icon: Icon, title, description }) => (
+          {metrics.map(({ icon, title, description }) => (
             <StaggerItem key={title}>
               <div className="rounded-2xl border border-surface-200/80 bg-white p-6 h-full transition-all duration-200 hover:border-primary-200 hover:shadow-[var(--shadow-card-hover)]">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50 mb-4">
-                  <Icon className="h-5 w-5 text-primary-500" />
+                <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-primary-50 mb-4">
+                  <Image
+                    src={icon}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="h-5 w-5 scale-[2.3] object-contain"
+                  />
                 </div>
                 <h4 className="text-[15px] font-semibold text-primary-950">{title}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-surface-500">{description}</p>

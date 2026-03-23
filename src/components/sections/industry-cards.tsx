@@ -1,30 +1,32 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import {
-  Stethoscope,
-  Building2,
-  Smile,
-  HeartPulse,
-  Heart,
-  Hospital,
-  Eye,
-  Sparkles,
   ArrowRight,
 } from "lucide-react";
+import przychodnieIcon from "@/components/icons/brand-przychodnie.svg";
+import gabinetyIcon from "@/components/icons/brand-gabinety.svg";
+import stomatologiaIcon from "@/components/icons/brand-stomatologia.svg";
+import ortodoncjaIcon from "@/components/icons/brand-ortodoncja.svg";
+import estetyczneIcon from "@/components/icons/brand-estetyczne.svg";
+import centraIcon from "@/components/icons/brand-centra.svg";
+import specjalistyczneIcon from "@/components/icons/brand-specjalistyczne.svg";
+import siecIcon from "@/components/icons/brand-siec.svg";
 import { Container, Section } from "@/components/ui/container";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Stethoscope,
-  Building2,
-  Smile,
-  HeartPulse,
-  Heart,
-  Hospital,
-  Eye,
-  Sparkles,
+const iconMap: Record<string, { src: StaticImageData; alt: string }> = {
+  Stethoscope: { src: przychodnieIcon, alt: "Ikona przychodni i klinik" },
+  Heart: { src: gabinetyIcon, alt: "Ikona gabinetow lekarskich" },
+  Smile: { src: stomatologiaIcon, alt: "Ikona stomatologii" },
+  HeartPulse: { src: ortodoncjaIcon, alt: "Ikona ortodoncji" },
+  Sparkles: { src: estetyczneIcon, alt: "Ikona medycyny estetycznej" },
+  Hospital: { src: centraIcon, alt: "Ikona centrow medycznych" },
+  Eye: { src: specjalistyczneIcon, alt: "Ikona gabinetow specjalistycznych" },
+  Building2: { src: siecIcon, alt: "Ikona sieci placowek" },
 };
 
 const industryItems = [
@@ -106,13 +108,21 @@ export function IndustryCards() {
 
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {industryItems.map(({ icon, title, description, features, href }) => {
-            const Icon = iconMap[icon];
+            const iconData = iconMap[icon];
             return (
               <StaggerItem key={title}>
                 <Link href={href} className="group block h-full">
                   <Card hover className="h-full flex flex-col">
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50">
-                      {Icon && <Icon className="h-5 w-5 text-primary-500" />}
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-primary-50">
+                      {iconData && (
+                        <Image
+                          src={iconData.src}
+                          alt={iconData.alt}
+                          width={20}
+                          height={20}
+                          className="h-5 w-5 scale-[2.3] object-contain"
+                        />
+                      )}
                     </div>
                     <CardTitle className="text-[15px]">{title}</CardTitle>
                     <CardDescription className="mt-2 flex-1">{description}</CardDescription>
