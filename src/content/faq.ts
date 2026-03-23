@@ -34,7 +34,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Czy mam wgląd w rozmowy prowadzone przez AI?",
     answer:
-      "Tak. W panelu VoiceLink Center masz dostęp do logów wszystkich rozmów i szczegółowych statystyk. Możesz analizować jakość obsługi, sprawdzać co pacjenci pytają najczęściej i doskonalić działanie agenta.",
+      "Masz dostęp do raportów jakości i statystyk pracy agenta AI, które pomagają oceniać skuteczność obsługi i rozwijać procesy w placówce. Zakres raportowania ustalamy indywidualnie podczas wdrożenia.",
     category: "product",
   },
   {

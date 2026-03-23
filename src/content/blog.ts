@@ -1492,7 +1492,7 @@ Algorytm: iloczyn każdej z pierwszych 10 cyfr przez odpowiednią wagę, suma wy
 
 <h2>FAQ — Jakość danych w kalendarzu wizyt</h2>
 
-<p><strong>Co jeśli pacjent twierdzi, że był zapisany, a w systemie go nie ma?</strong> VoiceLink rejestruje każdą interakcję z logiem rozmowy i statusem rezerwacji. W przypadku sporu klinika ma dostęp do nagrania lub transkrypcji potwierdzającej, co zostało uzgodnione — i kiedy. To zamienia subiektywne "byłem zapisany" w weryfikowalny fakt.</p>
+<p><strong>Co jeśli pacjent twierdzi, że był zapisany, a w systemie go nie ma?</strong> VoiceLink rejestruje każdą interakcję wraz ze statusem rezerwacji i znacznikiem czasu. W przypadku sporu klinika może zweryfikować przebieg procesu operacyjnego i ustalić, co zostało uzgodnione oraz kiedy. To zamienia subiektywne "byłem zapisany" w weryfikowalny fakt.</p>
 
 <p><strong>Czy AI może naprawić błędy wprowadzone wcześniej przez rejestratorki?</strong> Nie retroaktywnie — ale po wdrożeniu VoiceLink nowe rezerwacje tworzone przez bota mają gwarantowaną integralność. Oczyszczenie historycznych błędów w bazie danych to oddzielny projekt migracyjny, który VoiceLink może wesprzeć w fazie wdrożenia.</p>
 
@@ -5271,7 +5271,7 @@ Każde z tych okien to pacjenci z realną intencją zapisu — blokowaną wyłą
 
 <p><strong>Co jeśli pacjent chce umówić pilną wizytę w środku nocy — czy bot "wie", że to nagłe?</strong> Bot może być skonfigurowany do zadania pytania o pilność wizyty. Jeśli pacjent sygnalizuje pilność lub ból, skrypt może zaproponować dostępne terminy najbliższe godzinowo, przekierować do dyżuru telemedycznego (jeśli klinika go oferuje) lub podać numer SOR/pogotowia w sytuacjach nagłych. Bot nie zastępuje opieki doraźnej — ale może ją sprawnie kierować.</p>
 
-<p><strong>Jak wygląda poranek po weekendzie z botem 24/7?</strong> Rejestratorka zaczyna dzień od listy wizyt zarezerwowanych przez bota w ciągu nocy i weekendu — bez żadnych "dziur" w kalendarzu. W systemie widzi wszystkie nowe wpisy z oznaczeniem "rejestracja automatyczna", może przejrzeć nagrania lub transkrypcje rozmów i ewentualnie zadzwonić do pacjentów wymagających dodatkowych informacji.</p>
+<p><strong>Jak wygląda poranek po weekendzie z botem 24/7?</strong> Rejestratorka zaczyna dzień od listy wizyt zarezerwowanych przez bota w ciągu nocy i weekendu — bez żadnych "dziur" w kalendarzu. W systemie widzi wszystkie nowe wpisy z oznaczeniem "rejestracja automatyczna" i może od razu oddzwonić do pacjentów wymagających dodatkowych informacji.</p>
 
 <p><strong>Czy pacjenci nie wolą rozmawiać z człowiekiem, nawet jeśli oznacza to czekanie do rana?</strong> Część pacjentów tak — i dla nich poczta głosowa lub formularz nadal jest opcją. Ale znacząca część pacjentów, szczególnie poniżej 45. roku życia, preferuje <strong>natychmiastowe działanie</strong> nad czekaniem. Oferując obie opcje (natychmiastowa rejestracja przez bota lub oddzwonienie rano), klinika obsługuje oba typy pacjentów.</p>
 
@@ -6260,7 +6260,7 @@ Panel zarządzania VoiceLink umożliwia przełączanie widoku między centralnym
 
 <p><strong>1. Kiedy i jak bot przekazuje połączenie do człowieka</strong> Bot przekazuje połączenie, gdy: pacjent o to prosi, gdy sprawa jest zbyt złożona, gdy bot nie rozpoznaje intencji po dwóch próbach lub gdy klinika skonfigurowała przekazanie dla określonych typów wizyt (np. pierwszorazowe w psychiatrii). Rejestratorka słyszy sygnał przekazania i widzi na ekranie skrótową informację: "pacjent pyta o wizytę pilną" lub "pacjent nowy, nie zidentyfikowany".</p>
 
-<p><strong>2. Jak czytać podsumowanie rozmowy bota</strong> Po każdym połączeniu obsłużonym przez bota rejestratorka widzi w HIS lub panelu VoiceLink krótki log: temat rozmowy, efekt (wizyta zarezerwowana / nierozwiązane / przekazano). Nie musi czytać całej transkrypcji — wystarczy 5-sekundowe spojrzenie na status.</p>
+<p><strong>2. Jak czytać podsumowanie rozmowy bota</strong> Po każdym połączeniu obsłużonym przez bota rejestratorka widzi w HIS lub panelu VoiceLink krótki status: temat rozmowy i efekt (wizyta zarezerwowana / nierozwiązane / przekazano). Wystarczy 5-sekundowe spojrzenie na status.</p>
 
 <p><strong>3. Jak zgłosić błąd lub sytuację niestandardową</strong> Jeśli bot popełnił błąd (np. zaproponował termin, który był już zajęty) lub pacjent zgłasza niezrozumiałą reakcję systemu — rejestratorka zgłasza to przez prosty formularz w panelu. To cenna informacja zwrotna, która poprawia działanie systemu.</p>
 
@@ -6286,7 +6286,7 @@ Panel zarządzania VoiceLink umożliwia przełączanie widoku między centralnym
 
 <h3>Etap 2: Pierwszy tydzień po uruchomieniu — nadzorowana kooperacja</h3>
 
-<p>W pierwszym tygodniu bot działa, ale rejestratorki monitorują jego rozmowy przez panel — mogą przejąć w każdej chwili. Celem nie jest kontrola bota, lecz <strong>oswojenie się z rytmem współpracy</strong>.</p>
+<p>W pierwszym tygodniu bot działa, a rejestratorki monitorują statusy i efekty obsługi w panelu — mogą przejąć sprawę w razie potrzeby. Celem nie jest kontrola bota, lecz <strong>oswojenie się z rytmem współpracy</strong>.</p>
 
 <p>W tym tygodniu zbierane są pierwsze zgłoszenia o błędach i nieoczekiwanych sytuacjach. Warto codziennie przez 10 minut zebrać feedback od recepcji: "Co zaskoczyło? Co działa dobrze? Czego brakuje?"</p>
 

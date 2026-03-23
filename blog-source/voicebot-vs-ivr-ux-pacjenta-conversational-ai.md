@@ -79,7 +79,7 @@ Efekt: klinika widzi „linia wolna" i sądzi, że system działa. W rzeczywisto
 | Seniorzy i osoby z trudnościami | Problematyczna (klawiatura, menu) | Swobodna rozmowa głosowa |
 | Kontekst rozmowy | Zero — każdy krok izolowany | Pełny kontekst dialogu |
 | Aktualizacja treści | Wymaga nagrania nowych komunikatów | Edycja konfiguracji bez nagrań |
-| Analityka | Podstawowe statystyki ścieżek | Transkrypcje, intencje, sentymenty |
+| Analityka | Podstawowe statystyki ścieżek | Intencje, tematy i trendy rozmów |
 
 ---
 

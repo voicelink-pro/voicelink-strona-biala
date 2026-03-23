@@ -113,7 +113,7 @@ VoiceLink rezerwuje konkretny termin w czasie rzeczywistym — bezpośrednio w k
 Bot może być skonfigurowany do zadania pytania o pilność wizyty. Jeśli pacjent sygnalizuje pilność lub ból, skrypt może zaproponować dostępne terminy najbliższe godzinowo, przekierować do dyżuru telemedycznego (jeśli klinika go oferuje) lub podać numer SOR/pogotowia w sytuacjach nagłych. Bot nie zastępuje opieki doraźnej — ale może ją sprawnie kierować.
 
 **Jak wygląda poranek po weekendzie z botem 24/7?**
-Rejestratorka zaczyna dzień od listy wizyt zarezerwowanych przez bota w ciągu nocy i weekendu — bez żadnych "dziur" w kalendarzu. W systemie widzi wszystkie nowe wpisy z oznaczeniem "rejestracja automatyczna", może przejrzeć nagrania lub transkrypcje rozmów i ewentualnie zadzwonić do pacjentów wymagających dodatkowych informacji.
+Rejestratorka zaczyna dzień od listy wizyt zarezerwowanych przez bota w ciągu nocy i weekendu — bez żadnych "dziur" w kalendarzu. W systemie widzi wszystkie nowe wpisy z oznaczeniem "rejestracja automatyczna" i może od razu oddzwonić do pacjentów wymagających dodatkowych informacji.
 
 **Czy pacjenci nie wolą rozmawiać z człowiekiem, nawet jeśli oznacza to czekanie do rana?**
 Część pacjentów tak — i dla nich poczta głosowa lub formularz nadal jest opcją. Ale znacząca część pacjentów, szczególnie poniżej 45. roku życia, preferuje **natychmiastowe działanie** nad czekaniem. Oferując obie opcje (natychmiastowa rejestracja przez bota lub oddzwonienie rano), klinika obsługuje oba typy pacjentów.

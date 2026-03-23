@@ -108,7 +108,7 @@ Większość błędów w kalendarzach wizyt nie wynika z nieuwagi czy niestarann
 ## FAQ — Jakość danych w kalendarzu wizyt
 
 **Co jeśli pacjent twierdzi, że był zapisany, a w systemie go nie ma?**
-VoiceLink rejestruje każdą interakcję z logiem rozmowy i statusem rezerwacji. W przypadku sporu klinika ma dostęp do nagrania lub transkrypcji potwierdzającej, co zostało uzgodnione — i kiedy. To zamienia subiektywne "byłem zapisany" w weryfikowalny fakt.
+VoiceLink rejestruje każdą interakcję wraz ze statusem rezerwacji i znacznikiem czasu. W przypadku sporu klinika może zweryfikować przebieg procesu operacyjnego i ustalić, co zostało uzgodnione oraz kiedy. To zamienia subiektywne "byłem zapisany" w weryfikowalny fakt.
 
 **Czy AI może naprawić błędy wprowadzone wcześniej przez rejestratorki?**
 Nie retroaktywnie — ale po wdrożeniu VoiceLink nowe rezerwacje tworzone przez bota mają gwarantowaną integralność. Oczyszczenie historycznych błędów w bazie danych to oddzielny projekt migracyjny, który VoiceLink może wesprzeć w fazie wdrożenia.

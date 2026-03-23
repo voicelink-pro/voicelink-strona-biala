@@ -31,7 +31,7 @@ Kluczem jest rozróżnienie: personel nie musi rozumieć, jak działa AI. Musi w
 Bot przekazuje połączenie, gdy: pacjent o to prosi, gdy sprawa jest zbyt złożona, gdy bot nie rozpoznaje intencji po dwóch próbach lub gdy klinika skonfigurowała przekazanie dla określonych typów wizyt (np. pierwszorazowe w psychiatrii). Rejestratorka słyszy sygnał przekazania i widzi na ekranie skrótową informację: "pacjent pyta o wizytę pilną" lub "pacjent nowy, nie zidentyfikowany".
 
 **2. Jak czytać podsumowanie rozmowy bota**
-Po każdym połączeniu obsłużonym przez bota rejestratorka widzi w HIS lub panelu VoiceLink krótki log: temat rozmowy, efekt (wizyta zarezerwowana / nierozwiązane / przekazano). Nie musi czytać całej transkrypcji — wystarczy 5-sekundowe spojrzenie na status.
+Po każdym połączeniu obsłużonym przez bota rejestratorka widzi w HIS lub panelu VoiceLink krótki status: temat rozmowy i efekt (wizyta zarezerwowana / nierozwiązane / przekazano). Wystarczy 5-sekundowe spojrzenie na status.
 
 **3. Jak zgłosić błąd lub sytuację niestandardową**
 Jeśli bot popełnił błąd (np. zaproponował termin, który był już zajęty) lub pacjent zgłasza niezrozumiałą reakcję systemu — rejestratorka zgłasza to przez prosty formularz w panelu. To cenna informacja zwrotna, która poprawia działanie systemu.
@@ -68,7 +68,7 @@ Kluczowe przesłanie: *"Bot odbiera rutynowe telefony. Wy obsługujecie tych, kt
 
 ### Etap 2: Pierwszy tydzień po uruchomieniu — nadzorowana kooperacja
 
-W pierwszym tygodniu bot działa, ale rejestratorki monitorują jego rozmowy przez panel — mogą przejąć w każdej chwili. Celem nie jest kontrola bota, lecz **oswojenie się z rytmem współpracy**.
+W pierwszym tygodniu bot działa, a rejestratorki monitorują statusy i efekty obsługi w panelu — mogą przejąć sprawę w razie potrzeby. Celem nie jest kontrola bota, lecz **oswojenie się z rytmem współpracy**.
 
 W tym tygodniu zbierane są pierwsze zgłoszenia o błędach i nieoczekiwanych sytuacjach. Warto codziennie przez 10 minut zebrać feedback od recepcji: "Co zaskoczyło? Co działa dobrze? Czego brakuje?"
 
