@@ -6,13 +6,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["lucide-react", "framer-motion"],
   },
   images: {
-    // WebP zamiast AVIF — przy tej samej wadze pliku często lepsza wierność kolorów/szczegółów na zdjęciach.
-    formats: ["image/webp"],
-    // Pełna skala + duże ekrany / Retina (wcześniej obcięte rozmiary obniżały rozdzielczość dostarczaną do przeglądarki).
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 2560, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Next 16 domyślnie dopuszcza tylko quality 75 — bez tego wyższe `quality` na <Image> są obcinane.
-    qualities: [75, 80, 85, 90, 92, 95, 100],
+    unoptimized: true,
   },
   headers: async () => [
     {
