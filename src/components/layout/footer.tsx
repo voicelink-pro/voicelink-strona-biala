@@ -130,10 +130,26 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 border-t border-surface-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="mt-14 border-t border-surface-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-surface-400">
             &copy; {currentYear} VoiceLink. Wszelkie prawa zastrzeżone.
           </p>
+          <a
+            href="https://czumin.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-surface-200/90 bg-white px-3 py-1.5 text-xs text-surface-500 shadow-sm transition-colors hover:border-primary-200 hover:bg-primary-50/60 hover:text-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400"
+          >
+            <Image
+              src="/images/icons/logo.czumin.png"
+              alt=""
+              width={20}
+              height={20}
+              className="h-5 w-5 shrink-0 object-contain"
+              aria-hidden
+            />
+            <span className="font-medium tracking-tight">Stworzone przez Czumin</span>
+          </a>
           <p className="text-xs text-surface-400">
             Dane przechowywane w UE &middot; Zgodność z RODO i AI Act
           </p>
