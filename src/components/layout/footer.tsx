@@ -137,7 +137,7 @@ export function Footer() {
           <a
             href="https://czumin.pl"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="inline-flex items-center gap-2 rounded-full border border-surface-200/90 bg-white px-3 py-1.5 text-xs text-surface-500 shadow-sm transition-colors hover:border-primary-200 hover:bg-primary-50/60 hover:text-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400"
           >
             <Image
