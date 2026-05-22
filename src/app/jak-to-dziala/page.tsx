@@ -53,6 +53,13 @@ const topicCards = [
     icon: Cpu,
     color: "accent" as const,
   },
+  {
+    href: "/jak-to-dziala/bezpieczenstwo",
+    title: "Bezpieczeństwo danych",
+    desc: "Szyfrowanie AES-256, TLS 1.3, serwery w UE, zgodność z RODO i AI Act. Privacy by design od pierwszego dnia.",
+    icon: Shield,
+    color: "emerald" as const,
+  },
 ];
 
 const demoCard = {

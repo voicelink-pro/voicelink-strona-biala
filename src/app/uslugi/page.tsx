@@ -7,6 +7,8 @@ import {
   CalendarCheck,
   Clock,
   LayoutDashboard,
+  Bell,
+  MessageSquare,
   ArrowRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -40,6 +42,20 @@ const services = [
     description: "Całodobowy asystent AI odpowiadający na pytania pacjentów, informujący o usługach i eskalujący pilne sprawy do personelu.",
     href: "/uslugi/obsluga-klienta-247",
     icon: Clock,
+  },
+  {
+    title: "Inteligentne przypomnienia",
+    description: "Automatyczne przypomnienia SMS i rozmowy głosowe AI o wizytach. Pacjent potwierdza, przekłada lub odwołuje wizytę bez udziału recepcji — redukcja no-show nawet do 5%.",
+    href: "/uslugi/inteligentne-przypomnienia",
+    icon: Bell,
+    badge: "Redukcja no-show",
+  },
+  {
+    title: "Chatbot VoiceLink",
+    description: "Inteligentna asystentka SMS rozumiejąca naturalny język. Pacjenci potwierdzają, zmieniają terminy i zadają pytania — bez sztywnych komend.",
+    href: "/uslugi/chatbot-voicelink",
+    icon: MessageSquare,
+    badge: "Naturalny język",
   },
   {
     title: "Panel VoiceLink Center",

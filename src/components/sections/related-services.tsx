@@ -7,6 +7,8 @@ import {
   CalendarCheck,
   Clock,
   LayoutDashboard,
+  Bell,
+  MessageSquare,
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
@@ -25,6 +27,8 @@ const allServices: ServiceLink[] = [
   { title: "Automatyzacja rozmów", description: "Zautomatyzuj powtarzalne scenariusze telefoniczne.", href: "/uslugi/automatyzacja-rozmow", icon: PhoneCall },
   { title: "Rezerwacje online", description: "Automatyczne umawianie wizyt z kalendarzem placówki.", href: "/uslugi/rezerwacje-online", icon: CalendarCheck },
   { title: "Obsługa klienta 24/7", description: "Całodobowy asystent AI dla pacjentów.", href: "/uslugi/obsluga-klienta-247", icon: Clock },
+  { title: "Inteligentne przypomnienia", description: "Automatyczne przypomnienia SMS i głosowe — redukcja no-show.", href: "/uslugi/inteligentne-przypomnienia", icon: Bell },
+  { title: "Chatbot VoiceLink", description: "Inteligentna asystentka SMS rozumiejąca naturalny język.", href: "/uslugi/chatbot-voicelink", icon: MessageSquare },
   { title: "Panel VoiceLink Center", description: "Analityka, statystyki i raporty w jednym miejscu.", href: "/uslugi/panel-voicelink-center", icon: LayoutDashboard },
 ];
 

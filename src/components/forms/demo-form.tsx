@@ -47,10 +47,13 @@ export function DemoForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: `${data.firstName} ${data.lastName}`,
+          firstName: data.firstName,
+          lastName: data.lastName,
           email: data.email,
           phone: data.phone,
           subject: "Formularz demo — Strona Demo",
           message: `Proszę o kontakt w sprawie demo.\n\nImię: ${data.firstName}\nNazwisko: ${data.lastName}\nTelefon: ${data.phone}\nEmail: ${data.email}`,
+          source: "demo-page",
         }),
       });
 

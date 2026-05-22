@@ -83,22 +83,31 @@ const colorMap: Record<string, { bg: string; text: string; border: string }> = {
 };
 
 const panelCards: { icon: typeof Phone; label: string; value: string; trend: string | null; up: boolean; iconBg: string; iconColor: string; wide?: boolean }[] = [
-  { icon: Phone, label: "Odebrane połączenia", value: "279", trend: "+27.1%", up: true, iconBg: "bg-violet-100", iconColor: "text-violet-500" },
-  { icon: TrendingUp, label: "Wskaźnik eskalacji", value: "8.0%", trend: "+2.2%", up: true, iconBg: "bg-orange-100", iconColor: "text-orange-500" },
-  { icon: CheckCircle, label: "Skuteczność", value: "5.0%", trend: "-3.6%", up: false, iconBg: "bg-emerald-100", iconColor: "text-emerald-500" },
-  { icon: CalendarCheck, label: "Umówione wizyty", value: "104", trend: "+25.2%", up: true, iconBg: "bg-blue-100", iconColor: "text-blue-500" },
-  { icon: Activity, label: "Niepowodzenia", value: "14", trend: "+19.3%", up: true, iconBg: "bg-red-100", iconColor: "text-red-500" },
-  { icon: Sparkles, label: "Śr. czas odpowiedzi", value: "475 ms", trend: "+0.3%", up: true, iconBg: "bg-pink-100", iconColor: "text-pink-500" },
-  { icon: Clock, label: "Śr. czas rozmowy", value: "2 min 53s", trend: "-31.1%", up: false, iconBg: "bg-violet-100", iconColor: "text-violet-500" },
-  { icon: MessageSquareText, label: "Najczęstszy temat", value: "appointment_reschedule", trend: null, up: false, iconBg: "bg-sky-100", iconColor: "text-sky-500", wide: true },
+  { icon: Phone, label: "Odebrane połączenia", value: "151", trend: "+67.8%", up: true, iconBg: "bg-violet-100", iconColor: "text-violet-500" },
+  { icon: CheckCircle, label: "Skuteczność", value: "82.0%", trend: "+1.2%", up: true, iconBg: "bg-emerald-100", iconColor: "text-emerald-500" },
+  { icon: TrendingUp, label: "Wskaźnik eskalacji", value: "9.0%", trend: "+4.3%", up: true, iconBg: "bg-orange-100", iconColor: "text-orange-500" },
+  { icon: CalendarCheck, label: "Umówione wizyty", value: "62", trend: "+87.9%", up: true, iconBg: "bg-blue-100", iconColor: "text-blue-500" },
+  { icon: Activity, label: "Niepowodzenia", value: "27", trend: "+58.8%", up: true, iconBg: "bg-red-100", iconColor: "text-red-500" },
+  { icon: Sparkles, label: "Śr. czas odpowiedzi", value: "478 ms", trend: "-2.5%", up: false, iconBg: "bg-pink-100", iconColor: "text-pink-500" },
+  { icon: Clock, label: "Śr. czas rozmowy", value: "4 min 48s", trend: "+1.4%", up: true, iconBg: "bg-violet-100", iconColor: "text-violet-500" },
+  { icon: MessageSquareText, label: "Najczęstszy temat", value: "appointment_booking", trend: null, up: false, iconBg: "bg-sky-100", iconColor: "text-sky-500", wide: true },
 ];
 
 const topicData = [
-  { topic: "Umawianie wizyt", pct: 38, color: "bg-primary-500" },
-  { topic: "Zmiana / odwołanie terminu", pct: 22, color: "bg-accent-500" },
-  { topic: "Informacje o placówce", pct: 18, color: "bg-emerald-500" },
-  { topic: "Wyniki i recepty", pct: 12, color: "bg-amber-500" },
-  { topic: "Inne zapytania", pct: 10, color: "bg-violet-500" },
+  { topic: "appointment_booking", pct: 46, color: "bg-primary-500", count: 70 },
+  { topic: "complaint", pct: 17, color: "bg-accent-500", count: 26 },
+  { topic: "general_inquiry", pct: 17, color: "bg-emerald-500", count: 25 },
+  { topic: "appointment_cancellation", pct: 12, color: "bg-amber-500", count: 18 },
+  { topic: "appointment_reschedule", pct: 8, color: "bg-violet-500", count: 12 },
+];
+
+const errorData = [
+  { reason: "pacjent się rozmyślił", pct: 16, color: "bg-red-500", count: 7 },
+  { reason: "Awaria połączenia w trakcie rejestracji", pct: 14, color: "bg-orange-500", count: 6 },
+  { reason: "Błąd systemu rezerwacji", pct: 14, color: "bg-rose-500", count: 6 },
+  { reason: "system niedostępny", pct: 14, color: "bg-amber-500", count: 6 },
+  { reason: "brak danych pacjenta", pct: 12, color: "bg-pink-500", count: 5 },
+  { reason: "brak wolnych terminów", pct: 12, color: "bg-violet-500", count: 5 },
 ];
 
 const liveTickets = [
@@ -115,6 +124,29 @@ const statusColors = {
   info: { bg: "bg-sky-50", text: "text-sky-600", dot: "bg-sky-500" },
   redirect: { bg: "bg-violet-50", text: "text-violet-600", dot: "bg-violet-500" },
 };
+
+/* ─── Donut segment (SVG) ─── */
+
+function DonutSegment({ offset, pct, color }: { offset: number; pct: number; color: string }) {
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+  const strokeLen = (pct / 100) * circumference;
+  const strokeOffset = (offset / 100) * circumference;
+
+  return (
+    <circle
+      cx="60"
+      cy="60"
+      r={radius}
+      fill="none"
+      stroke={color}
+      strokeWidth="18"
+      strokeDasharray={`${strokeLen} ${circumference - strokeLen}`}
+      strokeDashoffset={-strokeOffset}
+      strokeLinecap="round"
+    />
+  );
+}
 
 /* ─── Animated bar ─── */
 
@@ -133,10 +165,12 @@ function AnimatedTopicBar({ topic, pct, color }: { topic: string; pct: number; c
 
   return (
     <div ref={ref}>
-      <div className="flex justify-between text-sm mb-2">
-        <span className="text-surface-600 font-medium">{topic}</span>
-        <span className="font-semibold text-primary-950">{pct}%</span>
-      </div>
+      {topic && (
+        <div className="flex justify-between text-sm mb-2">
+          <span className="text-surface-600 font-medium">{topic}</span>
+          <span className="font-semibold text-primary-950">{pct}%</span>
+        </div>
+      )}
       <div className="h-3 rounded-full bg-surface-200/60 overflow-hidden">
         <div
           className={`h-full rounded-full ${color} transition-all duration-1000 ease-out`}
@@ -270,15 +304,16 @@ export default function PanelVoiceLinkCenterPage() {
           <FadeIn delay={0.15}>
             <div className="relative mx-auto max-w-5xl">
               <div className="rounded-2xl border border-surface-200/80 bg-white p-2 shadow-[var(--shadow-card)] overflow-hidden">
-                <div className="relative aspect-[16/9] rounded-xl bg-gradient-to-br from-surface-50 to-surface-100 flex items-center justify-center overflow-hidden">
+                <div className="relative rounded-xl bg-surface-50 overflow-hidden">
                   <Image
-                    src="/images/panel-voicelink-center.jpg"
+                    src="/images/panel-voicelink.png"
                     alt="VoiceLink Center — panel analityczny dla placówek medycznych"
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 1024px) 100vw, 960px"
-                    quality={95}
+                    width={3420}
+                    height={1894}
+                    className="w-full h-auto"
+                    sizes="(max-width: 1280px) 100vw, 1200px"
                     priority
+                    unoptimized
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-surface-50/80 opacity-0 hover:opacity-0 transition-opacity" />
                 </div>
@@ -402,154 +437,199 @@ export default function PanelVoiceLinkCenterPage() {
         </Container>
       </section>
 
-      {/* ── WIDOK OPERACYJNY — TICKETY ── */}
-      <section id="tickety" className="py-16 md:py-24">
-        <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <FadeIn delay={0.1}>
-              <div className="rounded-2xl border border-surface-200/80 bg-white p-6 sm:p-8 shadow-[var(--shadow-card)]">
-                <div className="flex items-center justify-between mb-6">
-                  <h4 className="font-semibold text-primary-950 flex items-center gap-2">
-                    <Ticket className="h-5 w-5 text-accent-500" /> Ostatnie zdarzenia
-                  </h4>
-                  <div className="flex items-center gap-2">
-                    <PulsingDot color="bg-emerald-500" />
-                    <span className="text-xs text-emerald-600 font-medium">Na żywo</span>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  {liveTickets.map((ticket, i) => {
-                    const sc = statusColors[ticket.status];
-                    return (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 * i, duration: 0.4 }}
-                        viewport={{ once: true }}
-                        className={`flex items-center gap-4 rounded-xl border border-surface-100 p-4 transition-all hover:border-surface-200`}
-                      >
-                        <div className={`w-2 h-2 rounded-full ${sc.dot} shrink-0`} />
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-center gap-2">
-                            <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${sc.bg} ${sc.text}`}>
-                              {ticket.type}
-                            </span>
-                            <span className="text-xs text-surface-400">{ticket.time}</span>
-                          </div>
-                          <p className="text-sm text-primary-950 font-medium mt-1">{ticket.detail}</p>
-                          <p className="text-xs text-surface-400">{ticket.sub}</p>
-                        </div>
-                        <ChevronRight className="w-4 h-4 text-surface-300 shrink-0" />
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-            </FadeIn>
-
-            <div>
-              <FadeIn>
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent-500 mb-4">
-                  Widok operacyjny
-                </span>
-                <h2 className="text-3xl font-bold text-primary-950 sm:text-4xl">
-                  Tickety w <span className="text-accent-500">czasie rzeczywistym</span>
-                </h2>
-              </FadeIn>
-              <FadeIn delay={0.1}>
-                <p className="mt-6 text-[17px] text-surface-600 leading-relaxed">
-                  Na bieżąco pojawiają się zdarzenia powiązane z obsługą pacjentów — rezerwacje wizyt,
-                  odwołania, pytania. Zespół ma stały podgląd tego, co aktualnie dzieje się w komunikacji
-                  z pacjentami, bez konieczności sprawdzania wielu różnych systemów.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.15}>
-                <div className="mt-8 space-y-6">
-                  {[
-                    { icon: CalendarCheck, title: "Automatyczne rezerwacje", desc: "Każda wizyta umówiona przez AI pojawia się natychmiast w panelu." },
-                    { icon: Eye, title: "Pełna widoczność", desc: "Jeden widok na wszystkie kanały — telefon, SMS, chat." },
-                    { icon: ShieldCheck, title: "Kontrola i eskalacja", desc: "Pilne sprawy wyróżnione wizualnie. Nic nie umknie." },
-                  ].map(({ icon: Icon, title, desc }) => (
-                    <div key={title} className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-accent-100/80 flex items-center justify-center shrink-0">
-                        <Icon className="h-5 w-5 text-accent-500" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-primary-950">{title}</h4>
-                        <p className="text-sm text-surface-500 leading-relaxed mt-1">{desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </FadeIn>
-            </div>
-          </div>
-        </Container>
-      </section>
 
       {/* ── NAJCZĘSTSZE TEMATY ROZMÓW ── */}
       <section id="tematy-rozmow" className="py-16 md:py-24">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <FadeIn>
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-emerald-600 mb-4">
-                  Tematy rozmów
-                </span>
-                <h2 className="text-3xl font-bold text-primary-950 sm:text-4xl">
-                  Zrozum potrzeby <span className="text-emerald-600">swoich pacjentów</span>
-                </h2>
-              </FadeIn>
-              <FadeIn delay={0.1}>
-                <p className="mt-6 text-[17px] text-surface-600 leading-relaxed">
-                  Panel prezentuje najczęstsze tematy rozmów pacjentów, co pozwala zoptymalizować procesy
-                  w placówce — zarówno organizacyjnie, jak i komunikacyjnie. To wiedza, która wcześniej
-                  była praktycznie niedostępna.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.15}>
-                <div className="mt-8 space-y-6">
-                  {[
-                    { icon: MessageSquareText, title: "Analiza tematów", desc: "Automatyczna kategoryzacja rozmów wg intencji pacjenta.", color: "emerald" },
-                    { icon: Sparkles, title: "Świadome decyzje", desc: "Dane do optymalizacji procesów, godzin pracy i komunikacji.", color: "primary" },
-                    { icon: PieChart, title: "Wizualizacja danych", desc: "Przejrzyste wykresy i statystyki, zrozumiałe na pierwszy rzut oka.", color: "accent" },
-                  ].map(({ icon: Icon, title, desc, color }) => {
-                    const clr = colorMap[color];
-                    return (
-                      <div key={title} className="flex items-start gap-4">
-                        <div className={`w-10 h-10 rounded-xl ${clr.bg} flex items-center justify-center shrink-0`}>
-                          <Icon className={`h-5 w-5 ${clr.text}`} />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-primary-950">{title}</h4>
-                          <p className="text-sm text-surface-500 leading-relaxed mt-1">{desc}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </FadeIn>
+          <FadeIn>
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-emerald-600 mb-4">
+                Intencje i błędy
+              </span>
+              <h2 className="text-3xl font-bold text-primary-950 sm:text-4xl">
+                Rozkład intencji i <span className="text-primary-500">ranking niepowodzeń</span>
+              </h2>
+              <p className="mt-4 text-lg text-surface-500">
+                Dokładna analiza czego dotyczą rozmowy pacjentów i dlaczego niektóre kończą się niepowodzeniem — na jednym ekranie.
+              </p>
             </div>
+          </FadeIn>
 
-            <FadeIn delay={0.2}>
-              <div className="rounded-2xl border border-surface-200/80 bg-white p-6 sm:p-8 shadow-[var(--shadow-card)]">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Ranking intencji */}
+            <FadeIn>
+              <div className="rounded-2xl border border-surface-200/80 bg-white p-6 sm:p-8 shadow-[var(--shadow-card)] h-full">
                 <div className="flex items-center justify-between mb-7">
                   <h4 className="font-semibold text-primary-950 flex items-center gap-2">
-                    <MessageSquareText className="h-5 w-5 text-emerald-600" /> Tematy rozmów
+                    <MessageSquareText className="h-5 w-5 text-primary-500" /> Ranking intencji
                   </h4>
                   <span className="text-xs text-surface-400 px-2.5 py-1 rounded-full bg-surface-50 border border-surface-200/80">
-                    Ostatnie 30 dni
+                    151 łącznie
                   </span>
                 </div>
-                <div className="space-y-5">
+                <div className="space-y-4">
                   {topicData.map((t) => (
-                    <AnimatedTopicBar key={t.topic} {...t} />
+                    <div key={t.topic}>
+                      <div className="flex justify-between text-sm mb-1.5">
+                        <span className="text-surface-600 font-medium">{t.topic}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-surface-400">{t.pct}%</span>
+                          <span className="font-semibold text-primary-950 bg-surface-50 border border-surface-200/80 px-2 py-0.5 rounded-lg text-xs tabular-nums">{t.count}</span>
+                        </div>
+                      </div>
+                      <AnimatedTopicBar topic="" pct={t.pct} color={t.color} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Ranking błędów */}
+            <FadeIn delay={0.15}>
+              <div className="rounded-2xl border border-surface-200/80 bg-white p-6 sm:p-8 shadow-[var(--shadow-card)] h-full">
+                <div className="flex items-center justify-between mb-7">
+                  <h4 className="font-semibold text-primary-950 flex items-center gap-2">
+                    <Activity className="h-5 w-5 text-red-500" /> Ranking błędów
+                  </h4>
+                  <span className="text-xs text-surface-400 px-2.5 py-1 rounded-full bg-surface-50 border border-surface-200/80">
+                    43 łącznie
+                  </span>
+                </div>
+                <div className="space-y-4">
+                  {errorData.map((e) => (
+                    <div key={e.reason}>
+                      <div className="flex justify-between text-sm mb-1.5">
+                        <span className="text-surface-600 font-medium truncate max-w-[70%]">{e.reason}</span>
+                        <div className="flex items-center gap-2 shrink-0">
+                          <span className="text-xs text-surface-400">{e.pct}%</span>
+                          <span className="font-semibold text-red-500 bg-red-50 border border-red-200/60 px-2 py-0.5 rounded-lg text-xs tabular-nums">{e.count}</span>
+                        </div>
+                      </div>
+                      <AnimatedTopicBar topic="" pct={e.pct} color={e.color} />
+                    </div>
                   ))}
                 </div>
               </div>
             </FadeIn>
           </div>
+
+          {/* Donut charts */}
+          <FadeIn delay={0.25}>
+            <div className="mt-12 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* Donut intencji */}
+              <div className="rounded-2xl border border-surface-200/80 bg-white p-6 sm:p-8 shadow-[var(--shadow-card)]">
+                <h4 className="font-semibold text-primary-950 mb-1">Rozkład intencji</h4>
+                <p className="text-xs text-surface-400 mb-6">Procentowy udział poszczególnych zapytań</p>
+                <div className="flex items-center gap-8">
+                  <div className="relative w-36 h-36 shrink-0">
+                    <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
+                      <DonutSegment offset={0} pct={46} color="var(--color-primary-500)" />
+                      <DonutSegment offset={46} pct={17} color="var(--color-accent-500)" />
+                      <DonutSegment offset={63} pct={17} color="var(--color-emerald-500)" />
+                      <DonutSegment offset={80} pct={12} color="var(--color-amber-500)" />
+                      <DonutSegment offset={92} pct={8} color="var(--color-violet-500)" />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="text-2xl font-bold text-primary-950">151</span>
+                      <span className="text-[10px] text-surface-400">łącznie</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2.5 flex-1">
+                    {topicData.map((t) => (
+                      <div key={t.topic} className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className={`w-2.5 h-2.5 rounded-full ${t.color}`} />
+                          <span className="text-xs text-surface-600 truncate max-w-[120px]">{t.topic}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-surface-400">{t.pct}%</span>
+                          <span className="text-xs font-semibold text-primary-950 tabular-nums">{t.count}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Donut błędów */}
+              <div className="rounded-2xl border border-surface-200/80 bg-white p-6 sm:p-8 shadow-[var(--shadow-card)]">
+                <h4 className="font-semibold text-primary-950 mb-1">Rozkład błędów</h4>
+                <p className="text-xs text-surface-400 mb-6">Najczęstsze przyczyny niepowodzeń</p>
+                <div className="flex items-center gap-8">
+                  <div className="relative w-36 h-36 shrink-0">
+                    <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
+                      <DonutSegment offset={0} pct={16} color="var(--color-red-500)" />
+                      <DonutSegment offset={16} pct={14} color="#f97316" />
+                      <DonutSegment offset={30} pct={14} color="#e11d48" />
+                      <DonutSegment offset={44} pct={14} color="var(--color-amber-500)" />
+                      <DonutSegment offset={58} pct={12} color="#ec4899" />
+                      <DonutSegment offset={70} pct={12} color="var(--color-violet-500)" />
+                      <DonutSegment offset={82} pct={18} color="#d1d5db" />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="text-2xl font-bold text-primary-950">43</span>
+                      <span className="text-[10px] text-surface-400">łącznie</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2.5 flex-1">
+                    {errorData.map((e) => (
+                      <div key={e.reason} className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className={`w-2.5 h-2.5 rounded-full ${e.color}`} />
+                          <span className="text-xs text-surface-600 truncate max-w-[120px]">{e.reason}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-surface-400">{e.pct}%</span>
+                          <span className="text-xs font-semibold text-red-500 tabular-nums">{e.count}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* ── DODATKOWE FUNKCJE ── */}
+      <section className="py-16 md:py-24">
+        <Container>
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent-500 mb-4">
+                Funkcje panelu
+              </span>
+              <h2 className="text-3xl font-bold text-primary-950 sm:text-4xl">
+                Wszystko w <span className="text-primary-500">jednym miejscu</span>
+              </h2>
+            </div>
+          </FadeIn>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { icon: MessageSquareText, title: "Transkrypcje rozmów", desc: "Pełny tekst każdej rozmowy AI z pacjentem — do wglądu i analizy.", color: "primary" },
+              { icon: PieChart, title: "Wykresy intencji", desc: "Kolorowe wizualizacje rozkładu zapytań pacjentów — donut i bar chart.", color: "accent" },
+              { icon: Activity, title: "Analiza niepowodzeń", desc: "Ranking przyczyn błędów i nieukończonych rozmów — identyfikuj problemy.", color: "rose" },
+              { icon: Ticket, title: "Zgłoszenia na żywo", desc: "Tickety i rezerwacje pojawiające się w czasie rzeczywistym.", color: "emerald" },
+              { icon: LineChart, title: "Wykresy dzienne", desc: "Połączenia i skuteczność dziennie — z porównaniem do poprzednich okresów.", color: "violet" },
+              { icon: Eye, title: "Podgląd szczegółów", desc: "Każde połączenie z datą, czasem, intencją i wynikiem — pełna transparentność.", color: "sky" },
+              { icon: BarChart3, title: "Eksport danych", desc: "CSV i PDF — pobierz raporty do dalszej analizy lub prezentacji.", color: "amber" },
+              { icon: ShieldCheck, title: "Kontrola jakości", desc: "Monitoruj jak AI radzi sobie z trudnymi rozmowami i eskalacjami.", color: "cyan" },
+            ].map(({ icon: Icon, title, desc, color }) => {
+              const c = colorMap[color];
+              return (
+                <StaggerItem key={title}>
+                  <div className="rounded-2xl border border-surface-200/80 bg-white p-6 h-full transition-all hover:shadow-[var(--shadow-card-hover)]">
+                    <div className={`w-11 h-11 rounded-xl ${c.bg} flex items-center justify-center mb-4`}>
+                      <Icon className={`h-5 w-5 ${c.text}`} />
+                    </div>
+                    <h4 className="text-sm font-semibold text-primary-950">{title}</h4>
+                    <p className="mt-1.5 text-xs text-surface-500 leading-relaxed">{desc}</p>
+                  </div>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
         </Container>
       </section>
 

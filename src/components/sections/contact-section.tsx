@@ -79,10 +79,13 @@ export function ContactSection() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: `${data.firstName} ${data.lastName}`,
+          firstName: data.firstName,
+          lastName: data.lastName,
           email: data.email,
           phone: data.phone,
           subject: "Formularz kontaktowy — Landing Page",
           message: `Proszę o kontakt.\n\nImię: ${data.firstName}\nNazwisko: ${data.lastName}\nTelefon: ${data.phone}\nEmail: ${data.email}`,
+          source: "homepage-contact",
         }),
       });
 

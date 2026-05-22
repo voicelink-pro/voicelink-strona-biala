@@ -44,7 +44,7 @@ export function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, source: "contact-page" }),
       });
 
       if (!response.ok) throw new Error("Submit failed");

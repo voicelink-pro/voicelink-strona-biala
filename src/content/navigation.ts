@@ -36,6 +36,18 @@ export const mainNavigation: NavItem[] = [
         icon: "Clock",
       },
       {
+        label: "Inteligentne przypomnienia",
+        href: "/uslugi/inteligentne-przypomnienia",
+        description: "SMS i AI Voice — redukcja no-show",
+        icon: "Bell",
+      },
+      {
+        label: "Chatbot VoiceLink",
+        href: "/uslugi/chatbot-voicelink",
+        description: "Inteligentna asystentka SMS",
+        icon: "MessageSquare",
+      },
+      {
         label: "Panel VoiceLink Center",
         href: "/uslugi/panel-voicelink-center",
         description: "Zaawansowany panel analityczny",
@@ -106,6 +118,12 @@ export const mainNavigation: NavItem[] = [
         href: "/technologia-ai",
         description: "Jak działa nasza sztuczna inteligencja",
         icon: "Cpu",
+      },
+      {
+        label: "Bezpieczeństwo",
+        href: "/jak-to-dziala/bezpieczenstwo",
+        description: "RODO, AI Act, szyfrowanie",
+        icon: "Shield",
       },
       {
         label: "Demo",
@@ -213,6 +231,25 @@ export const footerColumns: FooterColumn[] = [
         ],
       },
       {
+        label: "Inteligentne przypomnienia",
+        href: "/uslugi/inteligentne-przypomnienia",
+        sections: [
+          { label: "Jak działa", href: "/uslugi/inteligentne-przypomnienia#jak-dziala" },
+          { label: "Inteligentne SMS-y", href: "/uslugi/inteligentne-przypomnienia#sms" },
+          { label: "AI Voice Assistant", href: "/uslugi/inteligentne-przypomnienia#ai-voice" },
+          { label: "Kalkulator no-show", href: "/uslugi/inteligentne-przypomnienia#kalkulator" },
+        ],
+      },
+      {
+        label: "Chatbot VoiceLink",
+        href: "/uslugi/chatbot-voicelink",
+        sections: [
+          { label: "Problem", href: "/uslugi/chatbot-voicelink#problem" },
+          { label: "W akcji", href: "/uslugi/chatbot-voicelink#jak-dziala" },
+          { label: "Możliwości", href: "/uslugi/chatbot-voicelink#mozliwosci" },
+        ],
+      },
+      {
         label: "Panel VoiceLink Center",
         href: "/uslugi/panel-voicelink-center",
         sections: [
@@ -311,6 +348,15 @@ export const footerColumns: FooterColumn[] = [
           { label: "Jak AI działa", href: "/technologia-ai#jak-dziala" },
           { label: "Automatyzacje", href: "/technologia-ai#automatyzacje" },
           { label: "Naturalny głos", href: "/technologia-ai#naturalny-glos" },
+        ],
+      },
+      {
+        label: "Bezpieczeństwo",
+        href: "/jak-to-dziala/bezpieczenstwo",
+        sections: [
+          { label: "Zabezpieczenia", href: "/jak-to-dziala/bezpieczenstwo#szczegoly" },
+          { label: "Privacy by Design", href: "/jak-to-dziala/bezpieczenstwo#privacy" },
+          { label: "AI Act", href: "/jak-to-dziala/bezpieczenstwo#ai-act" },
         ],
       },
       {

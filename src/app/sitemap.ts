@@ -15,6 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/uslugi/automatyzacja-rozmow`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/uslugi/rezerwacje-online`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/uslugi/obsluga-klienta-247`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/uslugi/inteligentne-przypomnienia`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/uslugi/chatbot-voicelink`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${SITE_URL}/jak-to-dziala/bezpieczenstwo`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/uslugi/panel-voicelink-center`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
 
     // Jak to działa

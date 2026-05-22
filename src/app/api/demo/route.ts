@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { after } from "next/server";
 import { z } from "zod";
 import { sendDemoNotification } from "@/lib/email";
+import { initiateOutboundCall } from "@/lib/elevenlabs";
 
 const demoSchema = z.object({
   name: z.string().min(2),
@@ -9,6 +11,9 @@ const demoSchema = z.object({
   phone: z.string().min(9),
   industry: z.string().min(1),
   message: z.string().optional(),
+  firstName: z.string().optional(),
+  lastName: z.string().optional(),
+  source: z.string().optional(),
 });
 
 const RATE_LIMIT_WINDOW = 60_000;
@@ -55,7 +60,33 @@ export async function POST(request: Request) {
       );
     }
 
-    await sendDemoNotification(result.data);
+    const data = result.data;
+
+    await sendDemoNotification({
+      name: data.name,
+      company: data.company,
+      email: data.email,
+      phone: data.phone,
+      industry: data.industry,
+      message: data.message,
+    });
+
+    after(async () => {
+      await initiateOutboundCall({
+        toNumber: data.phone,
+        customerName: data.name,
+        customerEmail: data.email,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        subject: `Demo — ${data.company}`,
+        message: data.message,
+        source: data.source || "demo-form",
+        extraVariables: {
+          customer_company: data.company,
+          customer_industry: data.industry,
+        },
+      });
+    });
 
     return NextResponse.json({ success: true, message: "Zgłoszenie zostało wysłane." });
   } catch (err) {

@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { after } from "next/server";
 import { z } from "zod";
 import { sendContactNotification } from "@/lib/email";
+import { initiateOutboundCall } from "@/lib/elevenlabs";
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -8,6 +10,9 @@ const contactSchema = z.object({
   phone: z.string().optional(),
   subject: z.string().min(3),
   message: z.string().min(10),
+  firstName: z.string().optional(),
+  lastName: z.string().optional(),
+  source: z.string().optional(),
 });
 
 const RATE_LIMIT_WINDOW = 60_000;
@@ -54,7 +59,34 @@ export async function POST(request: Request) {
       );
     }
 
-    await sendContactNotification(result.data);
+    const data = result.data;
+
+    await sendContactNotification({
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      subject: data.subject,
+      message: data.message,
+    });
+
+    // Po wysłaniu emaila uruchamiamy agenta AI w tle (nie blokuje odpowiedzi).
+    // Wymaga numeru telefonu — bez niego AI nie ma jak oddzwonić.
+    if (data.phone) {
+      after(async () => {
+        await initiateOutboundCall({
+          toNumber: data.phone!,
+          customerName: data.name,
+          customerEmail: data.email,
+          firstName: data.firstName,
+          lastName: data.lastName,
+          subject: data.subject,
+          message: data.message,
+          source: data.source || "contact-form",
+        });
+      });
+    } else {
+      console.info("[CONTACT FORM] Brak telefonu — pomijam wywołanie agenta AI.");
+    }
 
     return NextResponse.json({ success: true, message: "Wiadomość została wysłana." });
   } catch (err) {

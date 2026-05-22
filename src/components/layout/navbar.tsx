@@ -26,6 +26,9 @@ import {
   Tag,
   Users,
   LayoutDashboard,
+  Bell,
+  MessageSquare,
+  Shield,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -53,6 +56,9 @@ const iconMap: Record<string, LucideIcon> = {
   Tag,
   Users,
   LayoutDashboard,
+  Bell,
+  MessageSquare,
+  Shield,
 };
 
 const sectionColorMap: Record<string, { iconBg: string; iconText: string; hoverBg: string }> = {
