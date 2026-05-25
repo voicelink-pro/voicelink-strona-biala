@@ -85,7 +85,7 @@ export const mainNavigation: NavItem[] = [
       },
       {
         label: "Gabinety specjalistyczne",
-        href: "/branze/placowki-specjalistyczne",
+        href: "/branze/gabinety-specjalistyczne",
         description: "Okuliści, dermatolodzy, kardiolodzy",
         icon: "Eye",
       },
@@ -297,10 +297,10 @@ export const footerColumns: FooterColumn[] = [
       },
       {
         label: "Gabinety specjalistyczne",
-        href: "/branze/placowki-specjalistyczne",
+        href: "/branze/gabinety-specjalistyczne",
         sections: [
-          { label: "Kwalifikacja pacjentów", href: "/branze/placowki-specjalistyczne#wstepna-kwalifikacja" },
-          { label: "Specjalności", href: "/branze/placowki-specjalistyczne#specjalnosci" },
+          { label: "Kwalifikacja pacjentów", href: "/branze/gabinety-specjalistyczne#wstepna-kwalifikacja" },
+          { label: "Specjalności", href: "/branze/gabinety-specjalistyczne#specjalnosci" },
         ],
       },
     ],

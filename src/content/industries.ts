@@ -272,8 +272,8 @@ export const industries: Industry[] = [
       "Kompleksowa automatyzacja obsługi telefonicznej dla centrów medycznych. VoiceLink obsługuje setki połączeń dziennie z integracją HIS.",
   },
   {
-    slug: "placowki-specjalistyczne",
-    name: "Placówki specjalistyczne",
+    slug: "gabinety-specjalistyczne",
+    name: "Gabinety specjalistyczne",
     icon: "HeartPulse",
     shortDescription:
       "AI recepcja dla poradni specjalistycznych, centrów diagnostycznych i rehabilitacyjnych.",
@@ -332,7 +332,7 @@ export const industryByNavSlug: Record<string, string> = {
   "gabinety-lekarskie": "gabinety-lekarskie",
   "gabinety-stomatologiczne": "gabinety-stomatologiczne",
   "centra-medyczne": "centra-medyczne",
-  "placowki-specjalistyczne": "placowki-specjalistyczne",
+  "gabinety-specjalistyczne": "gabinety-specjalistyczne",
 };
 
 export function getIndustryBySlug(slug: string): Industry | undefined {

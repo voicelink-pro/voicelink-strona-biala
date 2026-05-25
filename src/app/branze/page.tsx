@@ -52,7 +52,7 @@ const facilityTypes = [
     color: "accent" as const,
   },
   {
-    href: "/branze/placowki-specjalistyczne",
+    href: "/branze/gabinety-specjalistyczne",
     title: "Gabinety specjalistyczne",
     desc: "Okuliści, dermatolodzy, kardiolodzy, fizjoterapeuci i inni specjaliści. Specyficzne pytania pacjentów i unikalne procesy rezerwacji — AI konfigurowany pod konkretną specjalizację.",
     icon: Eye,

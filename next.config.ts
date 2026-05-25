@@ -8,6 +8,18 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  redirects: async () => [
+    {
+      source: "/branze/placowki-specjalistyczne",
+      destination: "/branze/gabinety-specjalistyczne",
+      permanent: true,
+    },
+    {
+      source: "/branze/placowki-specjalistyczne/:path*",
+      destination: "/branze/gabinety-specjalistyczne/:path*",
+      permanent: true,
+    },
+  ],
   headers: async () => [
     {
       source: "/(.*)",

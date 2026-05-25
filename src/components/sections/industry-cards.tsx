@@ -56,14 +56,14 @@ const industryItems = [
     title: "Ortodoncja",
     description: "Zarządzanie długoterminowymi planami leczenia, kontrole okresowe, koordynacja wizyt follow-up.",
     features: ["Plan leczenia", "Wizyty kontrolne", "Follow-up AI"],
-    href: "/branze/placowki-specjalistyczne",
+    href: "/branze/gabinety-specjalistyczne",
   },
   {
     icon: "Sparkles",
     title: "Medycyna estetyczna",
     description: "Dyskretna obsługa zapytań o zabiegi, konsultacje cenowe, zarządzanie listą oczekujących na popularne terminy.",
     features: ["Konsultacje cenowe", "Lista oczekujących", "Dyskretna obsługa"],
-    href: "/branze/placowki-specjalistyczne",
+    href: "/branze/gabinety-specjalistyczne",
   },
   {
     icon: "Hospital",
@@ -77,7 +77,7 @@ const industryItems = [
     title: "Gabinety specjalistyczne",
     description: "Okuliści, dermatolodzy, kardiolodzy — AI dopasowuje pacjenta do specjalisty i informuje o przygotowaniu do badań.",
     features: ["Matching specjalisty", "Instrukcje badań", "Eskalacja pilna"],
-    href: "/branze/placowki-specjalistyczne",
+    href: "/branze/gabinety-specjalistyczne",
   },
   {
     icon: "Building2",
