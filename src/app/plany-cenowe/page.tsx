@@ -72,7 +72,7 @@ const benefitColors = {
 
 const faqItems = [
   { q: "Czym VoiceLink różni się od tanich voicebotów?", a: "VoiceLink to nie gotowy produkt z pudełka. Każde wdrożenie projektujemy indywidualnie — scenariusze rozmów, integracja z Twoim konkretnym systemem, logika obsługi dopasowana do specyfiki placówki. To dedykowana infrastruktura AI, nie uniwersalny bot z jednym skryptem dla wszystkich." },
-  { q: "Dlaczego wdrożenie kosztuje 2 500 – 15 000 zł?", a: "Bo to nie instalacja gotowej aplikacji. Projektujemy scenariusze rozmów pod Twoją placówkę, integrujemy system z Twoim kalendarzem i bazą danych, konfigurujemy logikę obsługi i testujemy z Twoim zespołem. To praca specjalistów AI, nie kliknięcie 'zainstaluj'." },
+  { q: "Dlaczego wdrożenie kosztuje 2 500 – 5 000 zł?", a: "Bo to nie instalacja gotowej aplikacji. Wdrożenie podstawowe kosztuje 2 500 zł. Projektujemy scenariusze rozmów pod Twoją placówkę, integrujemy system z Twoim kalendarzem i bazą danych, konfigurujemy logikę obsługi i testujemy z Twoim zespołem. Przy większej złożoności cena mieści się w zakresie do 5 000 zł." },
   { q: "Jak wygląda rozliczenie miesięczne?", a: "Miesięczny koszt utrzymania jest rozliczany minutowo — płacisz za faktycznie wykorzystane minuty rozmów oraz wysłane SMS-y. Im większy wolumen, tym niższa stawka za minutę." },
   { q: "Czy trzeba kupować sprzęt?", a: "Nie. VoiceLink działa w chmurze — wystarczy połączenie internetowe i numer telefonu." },
   { q: "Jak długo trwa wdrożenie?", a: "Średni czas wdrożenia to 14–30 dni. Zależy od złożoności integracji i liczby scenariuszy do zaprogramowania. Każdy projekt jest budowany od podstaw pod Twoją placówkę." },
@@ -124,8 +124,8 @@ export default function PlanyCenowePage() {
                   <span className="text-xs text-accent-600 font-medium">Opłata jednorazowa</span>
                 </div>
                 <h2 className="text-2xl font-semibold text-primary-950 mb-2">Wdrożenie asystenta AI</h2>
-                <div className="text-3xl font-bold text-accent-500 mb-4 mt-2">5 000 – 25 000 zł</div>
-                <p className="text-surface-500 text-sm leading-relaxed mb-6">Jednorazowy koszt konfiguracji i uruchomienia asystenta. Cena zależy od złożoności projektu.</p>
+                <div className="text-3xl font-bold text-accent-500 mb-4 mt-2">2 500 – 5 000 zł</div>
+                <p className="text-surface-500 text-sm leading-relaxed mb-6">Wdrożenie podstawowe kosztuje 2 500 zł. Jednorazowy koszt konfiguracji i uruchomienia asystenta. Cena zależy od złożoności projektu i nie przekracza 5 000 zł.</p>
                 <div className="space-y-4 flex-1">
                   <p className="text-xs text-surface-400 uppercase tracking-wider font-medium mb-2">Cena zależy od:</p>
                   {wdrozenieFactors.map((f) => (

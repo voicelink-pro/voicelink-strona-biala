@@ -140,7 +140,7 @@ export const mainNavigation: NavItem[] = [
       {
         label: "Kalkulator oszczędności",
         href: "/kalkulator-oszczednosci",
-        description: "Oblicz ile zaoszczędzisz",
+        description: "Zobacz odzyskany czas recepcji",
         icon: "Calculator",
       },
       {

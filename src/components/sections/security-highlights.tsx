@@ -15,8 +15,8 @@ const securityFeatures = [
   },
   {
     icon: Server,
-    title: "Infrastruktura w UE",
-    description: "Serwery w centrach danych w Unii Europejskiej. Brak transferu poza EOG.",
+    title: "Kontrola dostępu",
+    description: "Dostęp do danych ograniczony uprawnieniami, kluczami API i logowaniem operacji.",
   },
   {
     icon: Shield,

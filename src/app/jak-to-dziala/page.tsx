@@ -56,7 +56,7 @@ const topicCards = [
   {
     href: "/jak-to-dziala/bezpieczenstwo",
     title: "Bezpieczeństwo danych",
-    desc: "Szyfrowanie AES-256, TLS 1.3, serwery w UE, zgodność z RODO i AI Act. Privacy by design od pierwszego dnia.",
+    desc: "Szyfrowanie AES-256, TLS 1.3, zgodność z RODO i AI Act. Privacy by design od pierwszego dnia.",
     icon: Shield,
     color: "emerald" as const,
   },
@@ -81,9 +81,8 @@ const colorMap: Record<string, { bg: string; text: string }> = {
 const securityBadges = [
   "AES-256",
   "TLS 1.3",
-  "Serwery w EU",
   "Zgodność z RODO",
-  "OSOZ API",
+  "AI Act",
 ];
 
 const processSteps = [
@@ -221,7 +220,7 @@ export default function JakToDzialaPage() {
                 Bezpieczeństwo i <span className="text-primary-500">RODO</span>
               </h2>
               <p className="mt-6 text-surface-500 leading-relaxed max-w-2xl mx-auto">
-                Wszystkie dane przetwarzane przez VoiceLink są szyfrowane (AES-256, TLS 1.3), przechowywane na serwerach w Unii Europejskiej i w pełni zgodne z RODO. Certyfikacja OSOZ API potwierdza bezpieczeństwo integracji z systemami medycznymi.
+                Wszystkie dane przetwarzane przez VoiceLink są szyfrowane (AES-256, TLS 1.3) i w pełni zgodne z RODO. Integracje z systemami medycznymi odbywają się przez szyfrowane połączenia API.
               </p>
               <div className="flex flex-wrap justify-center gap-3 mt-8">
                 {securityBadges.map((badge) => (

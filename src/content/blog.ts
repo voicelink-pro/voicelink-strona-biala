@@ -525,7 +525,7 @@ Do trenowania modeli SER używa się m.in. bazy <strong>IEMOCAP</strong> (Intera
 
 <p>Voicebot przetwarzający dane zdrowotne pacjentów to partner w bezpieczeństwie kliniki — nie tylko dostawca oprogramowania. Dostawca, który nie potrafi odpowiedzieć na powyższe pytania lub odpowiada ogólnikami, przerzuca ryzyko prawne i finansowe na Twoją placówkę.</p>
 
-<p><strong>Sprawdź odpowiedzi VoiceLink na wszystkie 25 pytań →</strong> Przygotujemy dla Ciebie wypełniony Security Questionnaire z dokumentacją certyfikatów, parametrami SLA i wzorcem DPA — gotowy do porównania z ofertami konkurencji.</p>`,
+<p><strong>Sprawdź odpowiedzi VoiceLink na wszystkie 25 pytań →</strong> Przygotujemy dla Ciebie wypełniony Security Questionnaire z parametrami SLA i wzorcem DPA — gotowy do porównania z ofertami konkurencji.</p>`,
     coverImage: "/images/blog/technologia.jpg",
     date: "2025-06-13",
     author: { name: "Jan Zieliński", role: "Dyrektor sprzedaży", avatar: "/images/jan.jpg" },
@@ -1224,7 +1224,7 @@ Model hybrydowy spełnia wymogi RODO przy zachowaniu elastyczności i pozwala na
 </ol>
 Chmura certyfikowanego dostawcy spełnia te kryteria na poziomie technicznie niedostępnym dla typowej przychodni zarządzającej własnym serwerem. Serwer lokalny może być bezpieczny — ale wymaga aktywnego zarządzania, regularnych aktualizacji, backupów i audytów, które w praktyce mniejszych placówek są rzadkością.
 
-<p><strong>Skontaktuj się z VoiceLink w sprawie dokumentacji bezpieczeństwa →</strong> Dostarczymy komplet dokumentów: umowę DPA, certyfikat ISO 27001, opis architektury bezpieczeństwa i listę subprocesorów — gotowe do przekazania IOD Twojej placówki.</p>`,
+<p><strong>Skontaktuj się z VoiceLink w sprawie dokumentacji bezpieczeństwa →</strong> Dostarczymy komplet dokumentów: umowę DPA, opis architektury bezpieczeństwa i listę subprocesorów — gotowe do przekazania IOD Twojej placówki.</p>`,
     coverImage: "/images/blog/technologia.jpg",
     date: "2025-07-04",
     author: { name: "Karol Kulis", role: "Założyciel VoiceLink", avatar: "/images/karol.jpg" },
@@ -2112,7 +2112,7 @@ To dane, które pozwalają <strong>optymalizować budżet reklamowy na poziomie 
 
 <p>Wdrożenie systemu AI w placówce medycznej bez przejścia przez tę listę kontrolną to narażenie organizacji na ryzyko prawne (UODO, NIS2), reputacyjne i kliniczne jednocześnie. <strong>Dobry dostawca AI medycznego nie tylko akceptuje tę listę — dostarcza dokumentację zanim zostanie zapytany.</strong></p>
 
-<p>VoiceLink przygotowuje kompletny pakiet dokumentacji compliance dla każdego wdrożenia: certyfikaty, DPA, opis architektury, politykę retencji i dokumentację AI Act — bez dodatkowych kosztów i bez konieczności kilkutygodniowego procesu due diligence.</p>
+<p>VoiceLink przygotowuje kompletny pakiet dokumentacji compliance dla każdego wdrożenia: DPA, opis architektury, politykę retencji i dokumentację AI Act — bez dodatkowych kosztów i bez konieczności kilkutygodniowego procesu due diligence.</p>
 
 <p><strong>Pobierz pakiet dokumentacji bezpieczeństwa VoiceLink →</strong> Skontaktuj się z nami, a w ciągu 48 godzin dostarczymy kompletny zestaw dokumentów wymaganych przez Twój dział IT lub zewnętrznego audytora.</p>`,
     coverImage: "/images/blog/technologia.jpg",
@@ -4792,7 +4792,7 @@ Dane przechowywane na serwerach (nagrania głosowe, transkrypcje, dane pacjentó
 <li><strong>RTO (Recovery Time Objective):</strong> Maksymalny czas przywrócenia systemu po awarii. Dla systemów medycznych przyjmuje się RTO ≤ 4 godziny jako standard minimum.</li>
 <li><strong>RPO (Recovery Point Objective):</strong> Maksymalny dopuszczalny punkt w czasie, do którego dane są przywracane (maksymalna utrata danych). RPO ≤ 1 godzina dla systemów voicebot oznacza kopie zapasowe co 60 minut.</li>
 </ul>
-VoiceLink zapewnia <strong>automatyczne kopie zapasowe co 15 minut</strong> z przechowywaniem w co najmniej dwóch geograficznie oddzielonych data centers w EOG — gwarantując RPO ≤ 15 minut i RTO ≤ 2 godziny.
+VoiceLink zapewnia <strong>automatyczne kopie zapasowe co 15 minut</strong> z przechowywaniem w co najmniej dwóch geograficznie oddzielonych data centers — gwarantując RPO ≤ 15 minut i RTO ≤ 2 godziny.
 
 <h2>Lista kontrolna przed podpisaniem umowy z dostawcą AI — pytania o przechowywanie danych</h2>
 
@@ -4820,7 +4820,7 @@ VoiceLink zapewnia <strong>automatyczne kopie zapasowe co 15 minut</strong> z pr
 
 <p>"Dbamy o bezpieczeństwo Twoich danych" to zdanie, które znajdziesz na stronie każdego dostawcy AI. <strong>ISO 27001, SOC 2 Type II, AES-256, TLS 1.3, EOG, RTO ≤ 2h</strong> — to konkretne, weryfikowalne standardy, które odróżniają realną ochronę od marketingowej obietnicy.</p>
 
-<p><strong>Poproś o dokumentację bezpieczeństwa VoiceLink →</strong> Udostępnimy aktualny raport SOC 2 Type II, certyfikaty ISO i szczegółowe parametry techniczne infrastruktury — do wglądu przed podpisaniem umowy.</p>`,
+<p><strong>Poproś o dokumentację bezpieczeństwa VoiceLink →</strong> Udostępnimy umowę DPA i szczegółowe parametry techniczne infrastruktury — do wglądu przed podpisaniem umowy.</p>`,
     coverImage: "/images/blog/aktualnosci.jpg",
     date: "2025-10-14",
     author: { name: "Karol Kulis", role: "Założyciel VoiceLink", avatar: "/images/karol.jpg" },
@@ -5450,7 +5450,7 @@ Brak DPA w momencie uruchomienia systemu to bezpośrednie naruszenie RODO — ni
 <li><strong>Decyzja o adekwatności</strong> dla kraju odbiorcy (np. USA — obowiązuje framework EU-US Data Privacy Framework od 2023 r., ale wymaga weryfikacji certyfikacji dostawcy)</li>
 <li><strong>Wiążące reguły korporacyjne (BCR)</strong> dla dużych grup korporacyjnych</li>
 </ul>
-VoiceLink przetwarza i przechowuje dane pacjentów <strong>wyłącznie na serwerach zlokalizowanych w EOG</strong> — co eliminuje konieczność stosowania mechanizmów transferu danych poza obszar i upraszcza zgodność RODO dla klinik.
+VoiceLink przetwarza dane pacjentów zgodnie z RODO — z umową DPA, szyfrowaniem i mechanizmami ochrony wymaganymi przy przekazywaniu danych.
 
 <h2>Praktyczna lista kontrolna RODO przed wdrożeniem voicebota</h2>
 
@@ -6008,7 +6008,7 @@ Wdrożenie voicebota paradoksalnie <strong>poprawia jakość obsługi osobistej<
 <li>Zna historię każdego pacjenta — integracja AI z HIS zapewnia personalizację każdej interakcji</li>
 <li>Nie czeka na pacjenta, który zapomni — automatyczne kampanie przypomnień i recall działają ciągle</li>
 <li>Informuje o każdym etapie — potwierdzenia, instrukcje przedzabiegowe, wyniki gotowe — wszystko automatyczne</li>
-<li>Chroni dane na poziomie enterprise — certyfikaty, audyty, zgodność z AI Act i RODO</li>
+<li>Chroni dane na poziomie enterprise — szyfrowanie, audyty, zgodność z AI Act i RODO</li>
 <li>Raportuje własną efektywność — analityka połączeń, wskaźnik no-show, konwersja leadów — widoczne w czasie rzeczywistym</li>
 </ul>
 To nie jest wizja przyszłości. To <strong>lista funkcji, które dziś są technicznie dostępne</strong> i które liderzy rynku już wdrożyli lub wdrażają.
@@ -6909,7 +6909,7 @@ Każda rezerwacja jest automatycznie uzupełniana o <strong>instrukcję przygoto
 
 <ul>
 <li>Pełne szyfrowanie danych medycznych i nagrań głosowych</li>
-<li>Przechowywanie danych na <strong>serwerach w UE</strong> z certyfikatem ISO 27001</li>
+<li>Szyfrowanie danych i umowa powierzenia przetwarzania (DPA)</li>
 <li>Automatyczną retencję i anonimizację zgodną z wymogami UODO</li>
 <li>Konfigurowalny moduł zbierania zgód RODO w trakcie rejestracji</li>
 </ul>
@@ -7031,7 +7031,7 @@ Zamiast telefonów, notatek i kartek — <strong>jeden automatyczny system, jedn
 <p>Dane szpitalne to najwrażliwsza kategoria danych zdrowotnych. VoiceLink spełnia wymogi na poziomie infrastruktury szpitalnej:</p>
 
 <ul>
-<li>Certyfikacja ISO 27001 i zgodność z normą PN-EN ISO 27799 (bezpieczeństwo informacji w ochronie zdrowia)</li>
+<li>Zgodność z przepisami o ochronie danych osobowych i bezpieczeństwie informacji w ochronie zdrowia</li>
 <li>Archiwizacja nagrań potwierdzeń przedoperacyjnych zgodnie z wymogami dokumentacji medycznej (20 lat)</li>
 <li>Szyfrowanie danych w spoczynku i transmisji (AES-256, TLS 1.3)</li>
 <li>Pełna integracja z systemami szpitalnymi (HIS, LIS, systemy anestezjologiczne)</li>
@@ -7294,7 +7294,7 @@ Każde przypomnienie jest <strong>spersonalizowane</strong> — zawiera imię pa
 
 <ul>
 <li>Szyfrowanie danych w spoczynku i podczas transmisji (TLS 1.3)</li>
-<li>Serwery wyłącznie w infrastrukturze <strong>UE</strong> (zgodność z wymogami UODO)</li>
+<li>Umowa DPA i dokumentacja dla inspektora ochrony danych (IOD)</li>
 <li>Automatyczna anonimizacja nagrań głosowych po upływie okresu retencji</li>
 <li>Konfigurowalny scenariusz zbierania zgód RODO bezpośrednio przez bota</li>
 <li>Gotowa dokumentacja dla inspektora ochrony danych (IOD) kliniki</li>
@@ -7640,7 +7640,7 @@ Każde zapytanie o cenę botoksu, lifting czy lipolizę to lead z intencją zaku
 <p>Dane o planowanych zabiegach estetycznych to dane wrażliwe w rozumieniu art. 9 RODO — dotyczą zdrowia i ciała pacjenta. VoiceLink spełnia najwyższe standardy:</p>
 
 <ul>
-<li>Dane przechowywane wyłącznie na <strong>serwerach zlokalizowanych w UE</strong></li>
+<li>Szyfrowanie danych i umowa powierzenia przetwarzania (DPA)</li>
 <li>Pełna anonimizacja nagrań po upływie okresu retencji</li>
 <li>Możliwość konfiguracji scenariusza zgody RODO w trakcie rozmowy z botem</li>
 <li>Gotowe szablony klauzul informacyjnych dla klinik medycznych</li>
@@ -8434,7 +8434,7 @@ Wynik PSA lub badania andrологicznego nie jest przekazywany przez recepcjoni
 
 <ul>
 <li>Szyfrowanie end-to-end dla nagrań i wywiadów</li>
-<li>Dane przechowywane na serwerach w UE</li>
+<li>Szyfrowanie danych i umowa powierzenia przetwarzania (DPA)</li>
 <li>Umowa Powierzenia Przetwarzania (DPA) zgodna z art. 28 RODO</li>
 <li>Wywiad przedwizytowy przekazywany wyłącznie do lekarza — nie do rejestracji</li>
 </ul>
@@ -8564,7 +8564,7 @@ System nigdy nie zastępuje interwencji kryzysowej — <strong>zawsze wskazuje d
 <ul>
 <li>Pełna separacja danych psychiatrycznych od innych systemów organizacji</li>
 <li>Szyfrowanie AES-256 wszystkich danych i nagrań</li>
-<li>Przechowywanie na serwerach w <strong>zamkniętej infrastrukturze UE</strong> z certyfikatem ISO 27001</li>
+<li>Szyfrowanie AES-256 i umowa powierzenia przetwarzania (DPA)</li>
 <li>Konfigurowalny czas retencji nagrań (domyślnie: anonimizacja po 30 dniach od wizyty)</li>
 <li>Gotowa dokumentacja RODO i DPIA (Data Protection Impact Assessment) dla centrum</li>
 </ul>
@@ -9302,7 +9302,7 @@ VoiceLink stosuje architekturę hybrydową — każda ścieżka dialogu korzysta
 
 <h2>Porównanie zbiorcze</h2>
 
-<table><thead><tr><th>Parametr</th><th>GPT-4 / LLM</th><th>Dedykowany NLU</th><th>Hybrydowy (VoiceLink)</th></tr></thead><tbody><tr><td>Latencja głosowa</td><td>0,8–4 sek.</td><td>0,3–0,8 sek.</td><td>0,3–0,8 sek.</td></tr><tr><td>Ryzyko hallucynacji</td><td>Średnie–wysokie</td><td>Brak (deterministyczny)</td><td>Niskie (NLU dla krytycznych ścieżek)</td></tr><tr><td>RODO (dane w UE)</td><td>Wymaga SCC (API OpenAI)</td><td>Tak (przy UE-hostingu)</td><td>Tak</td></tr><tr><td>Elastyczność dialogu</td><td>Bardzo wysoka</td><td>Ograniczona</td><td>Wysoka</td></tr><tr><td>Koszt per rozmowa</td><td>Zmienny (tokeny)</td><td>Stały (abonament)</td><td>Stały</td></tr><tr><td>Czas wdrożenia</td><td>Krótszy (prompt engineering)</td><td>Dłuższy (trenowanie)</td><td>Średni</td></tr><tr><td>Aktualizacja bazy wiedzy</td><td>Łatwa (RAG)</td><td>Wymaga rekonfiguracji</td><td>Łatwa</td></tr></tbody></table>
+<table><thead><tr><th>Parametr</th><th>GPT-4 / LLM</th><th>Dedykowany NLU</th><th>Hybrydowy (VoiceLink)</th></tr></thead><tbody><tr><td>Latencja głosowa</td><td>0,8–4 sek.</td><td>0,3–0,8 sek.</td><td>0,3–0,8 sek.</td></tr><tr><td>Ryzyko hallucynacji</td><td>Średnie–wysokie</td><td>Brak (deterministyczny)</td><td>Niskie (NLU dla krytycznych ścieżek)</td></tr><tr><td>Zgodność z RODO</td><td>Wymaga SCC (API OpenAI)</td><td>Tak (przy własnym hostingu)</td><td>Tak</td></tr><tr><td>Elastyczność dialogu</td><td>Bardzo wysoka</td><td>Ograniczona</td><td>Wysoka</td></tr><tr><td>Koszt per rozmowa</td><td>Zmienny (tokeny)</td><td>Stały (abonament)</td><td>Stały</td></tr><tr><td>Czas wdrożenia</td><td>Krótszy (prompt engineering)</td><td>Dłuższy (trenowanie)</td><td>Średni</td></tr><tr><td>Aktualizacja bazy wiedzy</td><td>Łatwa (RAG)</td><td>Wymaga rekonfiguracji</td><td>Łatwa</td></tr></tbody></table>
 
 <h2>FAQ — Pytania techniczne dyrektorów IT placówek medycznych</h2>
 
@@ -9316,9 +9316,9 @@ VoiceLink stosuje architekturę hybrydową — każda ścieżka dialogu korzysta
 
 <p>Wybór architektury voicebota medycznego to decyzja inżynierska z konsekwencjami prawnymi i klinicznymi. Nie istnieje "najlepsza" technologia w oderwaniu od kontekstu — istnieje technologia najlepiej dopasowana do konkretnych wymagań: latencji, bezpieczeństwa, elastyczności i skali.</p>
 
-<p>VoiceLink stosuje architekturę hybrydową, w której każda ścieżka dialogu korzysta z technologii optymalnej dla jej wymagań — a dane pacjentów nigdy nie opuszczają infrastruktury UE.</p>
+<p>VoiceLink stosuje architekturę hybrydową, w której każda ścieżka dialogu korzysta z technologii optymalnej dla jej wymagań — z umową DPA i szyfrowaniem danych.</p>
 
-<p><strong>Zapytaj o specyfikację techniczną VoiceLink →</strong> Dostarczymy pełną dokumentację architektury, opis przepływu danych i certyfikaty bezpieczeństwa — do oceny przez Twój dział IT lub zewnętrznego audytora.</p>`,
+<p><strong>Zapytaj o specyfikację techniczną VoiceLink →</strong> Dostarczymy pełną dokumentację architektury i opis przepływu danych — do oceny przez Twój dział IT lub zewnętrznego audytora.</p>`,
     coverImage: "/images/blog/porownania.jpg",
     date: "2026-02-26",
     author: { name: "Jan Zieliński", role: "Dyrektor sprzedaży", avatar: "/images/jan.jpg" },

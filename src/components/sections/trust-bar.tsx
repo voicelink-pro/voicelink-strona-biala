@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/container";
 
 const trustItems = [
   { icon: Shield, label: "Zgodność z RODO" },
-  { icon: Server, label: "Serwery w UE" },
+  { icon: Server, label: "Umowa DPA" },
   { icon: Lock, label: "Szyfrowanie AES-256" },
   { icon: FileCheck, label: "Gotowość na AI Act" },
 ];

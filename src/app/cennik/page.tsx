@@ -89,7 +89,7 @@ export default function CennikPage() {
                       </div>
                       <div>
                         <div className="text-primary-950 text-sm font-semibold">Jednorazowe wdrożenie</div>
-                        <div className="text-primary-500 text-xs font-medium">2 500 - 15 000 zł</div>
+                        <div className="text-primary-500 text-xs font-medium">2 500 – 5 000 zł</div>
                       </div>
                     </div>
                     <ul className="space-y-2">
@@ -156,7 +156,7 @@ export default function CennikPage() {
               <h2 className="text-3xl font-bold text-primary-950 sm:text-4xl">
                 Narzędzia do <span className="text-primary-500">podejmowania decyzji</span>
               </h2>
-              <p className="mt-4 text-surface-500 max-w-2xl mx-auto">Sprawdź ile zaoszczędzisz i poznaj szczegóły cennika wdrożenia.</p>
+              <p className="mt-4 text-surface-500 max-w-2xl mx-auto">Sprawdź, ile czasu recepcji odzyskasz, i poznaj szczegóły cennika wdrożenia.</p>
             </div>
           </FadeIn>
 
@@ -170,10 +170,10 @@ export default function CennikPage() {
                 </div>
                 <h3 className="text-primary-950 font-semibold text-xl mb-3">Kalkulator oszczędności</h3>
                 <p className="text-surface-500 text-sm leading-relaxed mb-6">
-                  Oblicz ile zaoszczędzisz automatyzując obsługę telefoniczną. Interaktywny kalkulator uwzględnia liczbę połączeń, pracowników recepcji, procent powtarzalnych rozmów i wskaźnik no-show.
+                  Zobacz, ile godzin recepcji pochłania telefon i jaką część tego obciążenia może przejąć VoiceLink. Wynik rozdziela odzyskany czas, wartość tego czasu i potencjalny przychód z ograniczenia no-show.
                 </p>
                 <span className="inline-flex items-center gap-2 text-emerald-600 font-medium text-sm group-hover:gap-3 transition-all">
-                  Oblicz oszczędności <ArrowRight className="w-4 h-4" />
+                  Policz odzyskany czas <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
             </StaggerItem>
@@ -187,7 +187,7 @@ export default function CennikPage() {
                 </div>
                 <h3 className="text-primary-950 font-semibold text-xl mb-3">Cennik wdrożenia</h3>
                 <p className="text-surface-500 text-sm leading-relaxed mb-6">
-                  Każde wdrożenie budujemy od podstaw pod Twoją placówkę — scenariusze, integracje, logika obsługi. To nie gotowy produkt, lecz dedykowana infrastruktura AI. Jednorazowe wdrożenie od 2 500 do 15 000 zł.
+                  Każde wdrożenie budujemy od podstaw pod Twoją placówkę — scenariusze, integracje, logika obsługi. To nie gotowy produkt, lecz dedykowana infrastruktura AI. Wdrożenie podstawowe kosztuje 2 500 zł. Zakres: 2 500 – 5 000 zł.
                 </p>
                 <span className="inline-flex items-center gap-2 text-accent-500 font-medium text-sm group-hover:gap-3 transition-all">
                   Zobacz szczegóły <ArrowRight className="w-4 h-4" />
@@ -221,11 +221,11 @@ export default function CennikPage() {
                   </div>
                   <div>
                     <h3 className="text-primary-950 font-semibold text-lg">Jednorazowe wdrożenie</h3>
-                    <span className="text-primary-500 text-sm font-medium">2 500 - 15 000 zł</span>
+                    <span className="text-primary-500 text-sm font-medium">2 500 – 5 000 zł</span>
                   </div>
                 </div>
                 <p className="text-surface-500 text-sm leading-relaxed">
-                  To nie instalacja gotowej aplikacji. Projektujemy scenariusze rozmów, integrujemy z Twoim systemem rezerwacyjnym i konfigurujemy logikę obsługi pod specyfikę Twojej placówki. Cena zależy od złożoności projektu.
+                  To nie instalacja gotowej aplikacji. Projektujemy scenariusze rozmów, integrujemy z Twoim systemem rezerwacyjnym i konfigurujemy logikę obsługi pod specyfikę Twojej placówki. Wdrożenie podstawowe to 2 500 zł. Cena zależy od złożoności projektu i mieści się w przedziale 2 500 – 5 000 zł.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {["Konfiguracja AI", "Scenariusze", "Integracje"].map((t) => (

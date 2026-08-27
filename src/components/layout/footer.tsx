@@ -151,7 +151,7 @@ export function Footer() {
             <span className="font-medium tracking-tight">Stworzone przez Czumin</span>
           </a>
           <p className="text-xs text-surface-400">
-            Dane przechowywane w UE &middot; Zgodność z RODO i AI Act
+            Szyfrowanie AES-256 &middot; Zgodność z RODO i AI Act
           </p>
         </div>
       </Container>

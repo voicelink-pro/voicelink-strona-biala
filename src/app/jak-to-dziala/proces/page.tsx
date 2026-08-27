@@ -17,7 +17,6 @@ import {
   Shield,
   Lock,
   ClipboardList,
-  Globe,
   CheckCircle,
   Clock,
 } from "lucide-react";
@@ -76,7 +75,6 @@ const securityFeatures = [
   { title: "Szyfrowanie danych", desc: "Wszystkie dane są szyfrowane w tranzycie (TLS 1.3) i w spoczynku (AES-256).", icon: Lock },
   { title: "Ograniczony dostęp", desc: "Dostęp do danych jest ściśle kontrolowany i logowany.", icon: Shield },
   { title: "Logowanie aktywności", desc: "Pełna historia operacji dla celów audytu i kontroli.", icon: ClipboardList },
-  { title: "Serwery w UE", desc: "Dane przechowywane na serwerach w Unii Europejskiej, zgodnie z RODO.", icon: Globe },
   { title: "Pełna zgodność z RODO", desc: "System zaprojektowany zgodnie z zasadami ochrony danych osobowych.", icon: CheckCircle },
 ];
 
@@ -265,7 +263,7 @@ export default function ProcesPage() {
                   <h3 className="text-2xl font-bold text-primary-950 mb-2">100% RODO</h3>
                   <p className="text-surface-500 text-sm mb-6">Pełna zgodność z przepisami UE</p>
                   <div className="grid grid-cols-2 gap-3">
-                    {[{ v: "AES-256", l: "Szyfrowanie" }, { v: "TLS 1.3", l: "Połączenia" }, { v: "OSOZ API", l: "Certyfikacja" }, { v: "EU", l: "Serwery" }].map((b) => (
+                    {[{ v: "AES-256", l: "Szyfrowanie" }, { v: "TLS 1.3", l: "Połączenia" }, { v: "DPA", l: "Umowa RODO" }, { v: "AI Act", l: "Zgodność" }].map((b) => (
                       <div key={b.v} className="rounded-xl border border-surface-200/60 bg-surface-50/60 p-3">
                         <span className="text-emerald-600 text-xs font-bold block">{b.v}</span>
                         <span className="text-surface-400 text-xs">{b.l}</span>

@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
-  BadgeCheck,
   Brain,
   CheckCircle,
   Database,
@@ -19,7 +18,6 @@ import {
   Send,
   Server,
   Shield,
-  ShieldCheck,
   Timer,
   UserCheck,
   Users,
@@ -38,8 +36,6 @@ import { generateServiceSchema } from "@/lib/schema";
 const heroBadges = [
   "AES-256",
   "TLS 1.3",
-  "SOC 2 Type II",
-  "ISO 27001",
   "RODO / GDPR",
   "AI Act Ready",
 ];
@@ -53,8 +49,8 @@ const coreFeatures = [
   },
   {
     icon: Server,
-    title: "Infrastruktura w Unii Europejskiej",
-    desc: "Serwery w centrach danych na terenie UE. Brak transferu danych poza Europejski Obszar Gospodarczy. Pełna kontrola nad lokalizacją danych.",
+    title: "Bezpieczna infrastruktura",
+    desc: "Dostęp do danych ograniczony uprawnieniami i kluczami API. Segmentacja środowisk, monitoring i regularne testy bezpieczeństwa.",
     color: "emerald" as const,
   },
   {
@@ -107,9 +103,9 @@ const aiActPoints = [
 ];
 
 const certifications = [
-  { name: "SOC 2 Type II", desc: "Audyt bezpieczeństwa, dostępności i poufności danych", icon: BadgeCheck },
-  { name: "ISO 27001", desc: "Międzynarodowy standard zarządzania bezpieczeństwem informacji", icon: ShieldCheck },
   { name: "GDPR / RODO", desc: "Pełna zgodność z europejskimi przepisami ochrony danych", icon: Globe },
+  { name: "Umowa DPA", desc: "Umowa powierzenia przetwarzania danych zgodna z art. 28 RODO", icon: FileCheck },
+  { name: "AES-256 / TLS 1.3", desc: "Szyfrowanie danych w spoczynku i w transmisji", icon: Lock },
   { name: "AI Act Ready", desc: "Zgodność z wymaganiami europejskiego aktu o sztucznej inteligencji", icon: Brain },
 ];
 
@@ -135,7 +131,7 @@ export default function BezpieczenstwoPage() {
         data={generateServiceSchema({
           name: "Bezpieczeństwo danych VoiceLink",
           description:
-            "Szyfrowanie AES-256, TLS 1.3, serwery w UE, RODO, AI Act, anonimizacja transkrypcji, privacy by design.",
+            "Szyfrowanie AES-256, TLS 1.3, RODO, AI Act, anonimizacja transkrypcji, privacy by design.",
           url: "/jak-to-dziala/bezpieczenstwo",
         })}
       />
@@ -422,8 +418,8 @@ export default function BezpieczenstwoPage() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-50 border border-amber-200/60 mb-4">
                     <FileCheck className="w-8 h-8 text-amber-600" />
                   </div>
-                  <h4 className="text-primary-950 font-semibold">Certyfikacje i standardy</h4>
-                  <p className="text-xs text-surface-400 mt-1">Wykorzystywana infrastruktura technologiczna</p>
+                  <h4 className="text-primary-950 font-semibold">Zgodność i standardy</h4>
+                  <p className="text-xs text-surface-400 mt-1">Ochrona danych i ramy prawne</p>
                 </div>
                 <div className="space-y-3">
                   {certifications.map(({ name, desc, icon: Icon }) => (
@@ -483,21 +479,6 @@ export default function BezpieczenstwoPage() {
             ))}
           </StaggerContainer>
 
-          <FadeIn delay={0.2}>
-            <div className="mt-10 rounded-2xl border border-primary-200/60 bg-primary-50/30 p-6 max-w-3xl mx-auto">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary-100/80 flex items-center justify-center shrink-0">
-                  <Globe className="w-5 h-5 text-primary-500" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-primary-950 mb-1">Transfer danych poza EOG</h4>
-                  <p className="text-sm text-surface-600 leading-relaxed">
-                    Dane mogą być przekazywane wyłącznie zaufanym podmiotom technologicznym przy zachowaniu odpowiednich zabezpieczeń prawnych, w tym standardowych klauzul umownych (SCC) dla transferów poza Europejski Obszar Gospodarczy.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
         </Container>
       </section>
 

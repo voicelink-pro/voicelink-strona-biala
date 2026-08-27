@@ -16,14 +16,16 @@ export type DynamicVariableValue = string | number | boolean;
 
 export interface OutboundCallInput {
   toNumber: string;
-  customerName: string;
-  customerEmail: string;
+  customerName?: string;
+  customerEmail?: string;
   source: string;
   firstName?: string;
   lastName?: string;
   subject?: string;
   message?: string;
   extraVariables?: Record<string, DynamicVariableValue>;
+  agentId?: string;
+  agentPhoneNumberId?: string;
 }
 
 export interface OutboundCallResult {
@@ -108,8 +110,9 @@ export async function initiateOutboundCall(
   input: OutboundCallInput
 ): Promise<OutboundCallResult> {
   const apiKey = process.env.ELEVENLABS_API_KEY;
-  const agentId = process.env.ELEVENLABS_AGENT_ID;
-  const agentPhoneNumberId = process.env.ELEVENLABS_AGENT_PHONE_NUMBER_ID;
+  const agentId = input.agentId || process.env.ELEVENLABS_AGENT_ID;
+  const agentPhoneNumberId =
+    input.agentPhoneNumberId || process.env.ELEVENLABS_AGENT_PHONE_NUMBER_ID;
   const enabled = process.env.ELEVENLABS_OUTBOUND_ENABLED !== "false";
 
   if (!enabled) {
@@ -129,17 +132,17 @@ export async function initiateOutboundCall(
     return { success: false, message: "Invalid phone number", conversationId: null, sipCallId: null };
   }
 
-  const { firstName: derivedFirst, lastName: derivedLast } = splitName(input.customerName);
+  const { firstName: derivedFirst, lastName: derivedLast } = splitName(input.customerName ?? "");
   const firstName = input.firstName?.trim() || derivedFirst;
   const lastName = input.lastName?.trim() || derivedLast;
 
   const dynamicVariables: Record<string, DynamicVariableValue> = {
-    customer_name: input.customerName,
-    customer_first_name: firstName,
-    customer_last_name: lastName,
-    customer_email: input.customerEmail,
     customer_phone: toNumber,
     form_source: input.source,
+    ...(input.customerName ? { customer_name: input.customerName } : {}),
+    ...(firstName ? { customer_first_name: firstName } : {}),
+    ...(lastName ? { customer_last_name: lastName } : {}),
+    ...(input.customerEmail ? { customer_email: input.customerEmail } : {}),
     ...(input.subject ? { form_subject: input.subject } : {}),
     ...(input.message ? { form_message: input.message } : {}),
     ...(input.extraVariables ?? {}),
@@ -151,6 +154,9 @@ export async function initiateOutboundCall(
     to_number: toNumber,
     conversation_initiation_client_data: {
       dynamic_variables: dynamicVariables,
+    },
+    telephony_call_config: {
+      ringing_timeout_secs: 45,
     },
   };
 
@@ -178,7 +184,7 @@ export async function initiateOutboundCall(
     }
 
     return {
-      success: Boolean(json.success),
+      success: json.success !== false,
       message: typeof json.message === "string" ? json.message : "ok",
       conversationId: json.conversation_id ?? null,
       sipCallId: json.sip_call_id ?? null,
@@ -192,4 +198,49 @@ export async function initiateOutboundCall(
       sipCallId: null,
     };
   }
+}
+
+export type ConversationStatus = "initiated" | "in-progress" | "processing" | "done" | "failed";
+
+export interface ConversationDetails {
+  conversationId: string;
+  status: ConversationStatus;
+  durationSecs: number;
+  acceptedAt: number | null;
+}
+
+export async function getConversationDetails(
+  conversationId: string
+): Promise<ConversationDetails | null> {
+  const apiKey = process.env.ELEVENLABS_API_KEY;
+  if (!apiKey) return null;
+
+  const response = await fetch(
+    `${ELEVENLABS_BASE_URL}/v1/convai/conversations/${encodeURIComponent(conversationId)}`,
+    {
+      headers: { "xi-api-key": apiKey },
+      cache: "no-store",
+    }
+  );
+
+  if (!response.ok) {
+    console.error("[ELEVENLABS] Get conversation failed:", response.status);
+    return null;
+  }
+
+  const json = (await response.json()) as {
+    conversation_id?: string;
+    status?: ConversationStatus;
+    metadata?: {
+      call_duration_secs?: number;
+      accepted_time_unix_secs?: number | null;
+    };
+  };
+
+  return {
+    conversationId: json.conversation_id ?? conversationId,
+    status: json.status ?? "initiated",
+    durationSecs: json.metadata?.call_duration_secs ?? 0,
+    acceptedAt: json.metadata?.accepted_time_unix_secs ?? null,
+  };
 }

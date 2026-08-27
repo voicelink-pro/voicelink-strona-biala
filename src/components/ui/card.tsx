@@ -41,3 +41,11 @@ export function CardDescription({
     <p className={cn("text-sm text-surface-500 leading-relaxed", className)} {...props} />
   );
 }
+
+export function CardContent({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("flex flex-col gap-4", className)} {...props} />;
+}
+
+export function CardFooter({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("mt-6 flex flex-col gap-3", className)} {...props} />;
+}

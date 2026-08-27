@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import dynamic from "next/dynamic";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import { SiteChrome } from "@/components/layout/site-chrome";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const ScrollTracker = dynamic(() => import("@/components/scroll-tracker").then((m) => m.ScrollTracker));
 import { JsonLd } from "@/components/json-ld";
@@ -100,10 +100,10 @@ export default function RootLayout({
             title="Google Tag Manager"
           />
         </noscript>
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <ScrollTracker />
+        <TooltipProvider>
+          <SiteChrome>{children}</SiteChrome>
+          <ScrollTracker />
+        </TooltipProvider>
       </body>
     </html>
   );

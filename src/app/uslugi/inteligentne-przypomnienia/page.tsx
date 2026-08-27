@@ -16,7 +16,6 @@ import {
   FileText,
   Globe,
   Link2,
-  MapPin,
   MessageCircle,
   MessageSquare,
   Phone,
@@ -959,8 +958,8 @@ export default function InteligentnePrzypomnieniePage() {
                 </div>
                 <div className="mt-6 pt-5 border-t border-surface-100 flex items-center justify-between text-xs">
                   <div className="flex items-center gap-1.5 text-surface-500">
-                    <MapPin className="w-3.5 h-3.5" />
-                    Serwery w UE
+                    <Zap className="w-3.5 h-3.5" />
+                    Szyfrowanie AES-256
                   </div>
                   <div className="flex items-center gap-1.5 text-surface-500">
                     <Globe className="w-3.5 h-3.5" />

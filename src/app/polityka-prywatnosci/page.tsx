@@ -392,15 +392,11 @@ export default function PolitykaPrywatnosciPage() {
               <CookieDeclaration />
             </SectionCard>
 
-            {/* 9. Przekazywanie poza EOG */}
+            {/* 9. Przekazywanie danych */}
             <SectionCard>
               <SectionTitle>
-                9. Przekazywanie danych poza EOG
+                9. Przekazywanie danych
               </SectionTitle>
-              <p className="text-surface-600 mb-4 leading-relaxed">
-                Co do zasady dane nie są przekazywane poza Europejski Obszar
-                Gospodarczy.
-              </p>
               <p className="text-surface-600 mb-4 leading-relaxed">
                 Jeśli dojdzie do przekazania danych (np. w ramach usług
                 chmurowych), odbywa się ono na podstawie:

@@ -62,11 +62,10 @@ const integrationSteps = [
 ];
 
 const securityChecks = [
-  "Certyfikacja OSOZ API — zgodność z Ogólnopolskim Systemem Ochrony Zdrowia",
   "Szyfrowanie danych wrażliwych AES-256 — PESEL, dane medyczne i osobowe w pełni chronione",
   "Szyfrowane połączenia TLS 1.3 — cała komunikacja z systemami medycznymi zabezpieczona",
   "Zgodność z RODO i przepisami ochrony danych medycznych",
-  "Serwery w Unii Europejskiej — dane nigdy nie opuszczają EU",
+  "Umowa DPA — powierzenie przetwarzania danych zgodne z art. 28 RODO",
   "Minimalizacja danych — zbieramy tylko to, co niezbędne do obsługi pacjenta",
   "Regularne audyty bezpieczeństwa i testy penetracyjne",
 ];
@@ -205,7 +204,7 @@ export default function IntegracjePage() {
                 <h2 className="text-3xl font-bold text-primary-950 sm:text-4xl">
                   Dane pacjentów <span className="text-primary-500">pod pełną ochroną</span>
                 </h2>
-                <p className="mt-4 text-surface-500 leading-relaxed mb-8">Integracja z systemami medycznymi wymaga najwyższych standardów bezpieczeństwa. VoiceLink spełnia wszystkie wymagania RODO, branżowe oraz wymogi certyfikacji OSOZ API.</p>
+                <p className="mt-4 text-surface-500 leading-relaxed mb-8">Integracja z systemami medycznymi wymaga najwyższych standardów bezpieczeństwa. VoiceLink spełnia wymagania RODO oraz branżowe standardy ochrony danych medycznych.</p>
                 <div className="space-y-4">
                   {securityChecks.map((check) => (
                     <div key={check} className="flex items-center gap-3">
@@ -222,8 +221,8 @@ export default function IntegracjePage() {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-100 to-primary-100 flex items-center justify-center mx-auto mb-5">
                     <Shield className="w-8 h-8 text-emerald-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-950 mb-2">OSOZ API</h3>
-                  <p className="text-surface-500 text-sm leading-relaxed">Certyfikowana integracja z Ogólnopolskim Systemem Ochrony Zdrowia.</p>
+                  <h3 className="text-xl font-semibold text-primary-950 mb-2">Umowa DPA</h3>
+                  <p className="text-surface-500 text-sm leading-relaxed">Umowa powierzenia przetwarzania danych zgodna z art. 28 RODO.</p>
                 </div>
                 <div className="rounded-3xl border border-surface-200/80 bg-white p-8 text-center shadow-[var(--shadow-card)]">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-100 to-pink-100 flex items-center justify-center mx-auto mb-5">

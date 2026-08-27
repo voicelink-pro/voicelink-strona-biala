@@ -4,7 +4,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = generatePageMetadata({
   title: "Cennik VoiceLink — Transparentny Model Cenowy AI Recepcji",
   description:
-    "Sprawdź ile kosztuje wdrożenie VoiceLink. Jednorazowe wdrożenie od 2 500 zł + miesięczny abonament. Każde rozwiązanie budowane indywidualnie pod Twoją placówkę.",
+    "Sprawdź ile kosztuje wdrożenie VoiceLink. Wdrożenie podstawowe 2 500 zł, zakres 2 500 – 5 000 zł + miesięczny abonament. Każde rozwiązanie budowane indywidualnie pod Twoją placówkę.",
   path: "/cennik",
   keywords: [
     "cennik voicelink",

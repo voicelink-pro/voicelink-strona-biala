@@ -22,7 +22,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Ile kosztuje wirtualna recepcja AI?",
     answer:
-      "Cena zależy od zakresu funkcji i liczby połączeń. Składa się z jednorazowej opłaty wdrożeniowej oraz miesięcznego abonamentu. W porównaniu do zatrudnienia pracownika oszczędzasz nawet 70% kosztów, a system AI pracuje 24/7 bez urlopów i zwolnień. Skontaktuj się po indywidualną wycenę.",
+      "Cena składa się z jednorazowego wdrożenia i miesięcznego abonamentu. Wdrożenie podstawowe kosztuje 2 500 zł, a w zależności od złożoności projektu mieści się w zakresie 2 500 – 5 000 zł. Abonament zależy od liczby połączeń. W porównaniu do zatrudnienia pracownika oszczędzasz nawet 70% kosztów, a system AI pracuje 24/7 bez urlopów i zwolnień.",
     category: "pricing",
   },
   {
@@ -52,7 +52,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Czy VoiceLink jest zgodny z RODO?",
     answer:
-      "Tak. System jest w pełni zgodny z RODO i przepisami o ochronie danych osobowych. Dane pacjentów są szyfrowane (AES-256), przechowywane na serwerach w UE i przetwarzane wyłącznie w celu realizacji usługi. Podpisujemy umowę powierzenia przetwarzania danych.",
+      "Tak. System jest w pełni zgodny z RODO i przepisami o ochronie danych osobowych. Dane pacjentów są szyfrowane (AES-256) i przetwarzane wyłącznie w celu realizacji usługi. Podpisujemy umowę powierzenia przetwarzania danych.",
     category: "security",
   },
   {

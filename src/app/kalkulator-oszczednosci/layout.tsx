@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Kalkulator Oszczędności — Oblicz ile Zaoszczędzisz z VoiceLink",
+  title: "Kalkulator VoiceLink — Odzyskany czas recepcji i przychód",
   description:
-    "Policz ile Twoja placówka zaoszczędzi dzięki AI recepcji. Porównaj koszty pracownika rejestracji z VoiceLink — oszczędności nawet do 70%.",
+    "Zobacz, ile czasu Twojego zespołu pochłania telefon i jaką część tego obciążenia może przejąć VoiceLink. Kalkulator pokazuje odzyskane godziny, przepustowość i potencjalny przychód — bez założenia redukcji etatów.",
   path: "/kalkulator-oszczednosci",
   keywords: [
     "kalkulator oszczędności",
+    "odzyskany czas recepcji",
     "ROI voicebot",
-    "oszczędności AI recepcja",
-    "koszt recepcji vs AI",
+    "przepustowość recepcji AI",
   ],
 });
 
