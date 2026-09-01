@@ -3,6 +3,7 @@ import { after } from "next/server";
 import { z } from "zod";
 import { sendContactNotification } from "@/lib/email";
 import { initiateOutboundCall } from "@/lib/elevenlabs";
+import { sendContactSms } from "@/lib/supervoip";
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -69,12 +70,18 @@ export async function POST(request: Request) {
       message: data.message,
     });
 
-    // Po wysłaniu emaila uruchamiamy agenta AI w tle (nie blokuje odpowiedzi).
-    // Wymaga numeru telefonu — bez niego AI nie ma jak oddzwonić.
-    if (data.phone) {
-      after(async () => {
+    after(async () => {
+      await sendContactSms({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        subject: data.subject,
+        message: data.message,
+      });
+
+      if (data.phone) {
         await initiateOutboundCall({
-          toNumber: data.phone!,
+          toNumber: data.phone,
           customerName: data.name,
           customerEmail: data.email,
           firstName: data.firstName,
@@ -83,10 +90,10 @@ export async function POST(request: Request) {
           message: data.message,
           source: data.source || "contact-form",
         });
-      });
-    } else {
-      console.info("[CONTACT FORM] Brak telefonu — pomijam wywołanie agenta AI.");
-    }
+      } else {
+        console.info("[CONTACT FORM] Brak telefonu — pomijam wywołanie agenta AI.");
+      }
+    });
 
     return NextResponse.json({ success: true, message: "Wiadomość została wysłana." });
   } catch (err) {

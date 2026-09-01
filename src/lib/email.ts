@@ -2,7 +2,7 @@ import { Resend } from "resend";
 
 /** Bez „noreply” — lepsza reputacja i dostarczalność (Resend Insights). */
 const FROM_DEFAULT = "VoiceLink <kontakt@voicelink.pl>";
-const TO_DEFAULT = "karol.kulis@voicelink.pl";
+const TO_DEFAULT = ["karol.kulis@voicelink.pl", "jan.zielinski@voicelink.pl"];
 
 function escapeHtml(text: string): string {
   return text
@@ -21,8 +21,16 @@ function getResend(): Resend {
   return new Resend(key);
 }
 
-export function getNotificationTo(): string {
-  return process.env.RESEND_TO_EMAIL?.trim() || TO_DEFAULT;
+export function getNotificationTo(): string[] {
+  const fromEnv = process.env.RESEND_TO_EMAIL?.trim();
+  if (fromEnv) {
+    const parsed = fromEnv
+      .split(",")
+      .map((email) => email.trim())
+      .filter(Boolean);
+    if (parsed.length > 0) return parsed;
+  }
+  return TO_DEFAULT;
 }
 
 export function getFromAddress(): string {
