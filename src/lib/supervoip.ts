@@ -58,14 +58,7 @@ function toMsisdn(raw: string): string {
   return digits;
 }
 
-function buildContactSms(data: ContactSmsInput): string {
-  const phone = data.phone?.trim() || "brak tel.";
-  const message = data.message.replace(/\s+/g, " ").trim();
-  const clipped = message.length > 80 ? `${message.slice(0, 77)}...` : message;
-  return `VoiceLink kontakt: ${data.name}, ${phone}, ${data.email}. Temat: ${data.subject}. ${clipped}`;
-}
-
-export async function sendContactSms(data: ContactSmsInput): Promise<{ sent: boolean; message: string }> {
+export async function sendContactSms(_data: ContactSmsInput): Promise<{ sent: boolean; message: string }> {
   const token = getApiToken();
   const voipNumber = getVoipNumberIri();
 
@@ -86,7 +79,7 @@ export async function sendContactSms(data: ContactSmsInput): Promise<{ sent: boo
     sender: "voipNumber",
     recipients,
     voipNumber,
-    text: buildContactSms(data),
+    text: "Nowy lead z formularza. Sprawdz maila Berbeciu.",
     country,
   };
 
